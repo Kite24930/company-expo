@@ -1,4 +1,16 @@
 <x-guest-layout>
+    @switch($type)
+        @case('student')
+            <h4>生徒用サインアップフォーム</h4>
+            @break
+        @case('company')
+            <h4>企業用サインアップフォーム</h4>
+            @break
+        @default
+
+            @break
+    @endswitch
+        <hr>
     <form method="POST" action="{{ route('register') }}">
         @csrf
 

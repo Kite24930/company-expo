@@ -1,1 +1,35 @@
-@import "./app.css";
+@import "./common.css";
+
+.title {
+    background-image: url("/resources/data/building.png");
+    background-size: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-color: #0f02;
+    h1, div {
+        background-color: #fffc;
+    }
+}
+
+.md-vertical {
+
+}
+
+.text-small {
+    font-size: 0.8rem;
+}
+
+.pages {
+    width: 80%;
+}
+
+@media screen and (min-width: 768px) {
+    .title {
+        background-size: contain;
+        background-repeat: repeat-x;
+    }
+
+    .md-vertical {
+        writing-mode: vertical-rl;
+    }
+}
