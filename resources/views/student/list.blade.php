@@ -60,4 +60,5 @@
             </div>
         </div>
     </div>
+    @vite(['resources/js/list.js'])
 </x-template>

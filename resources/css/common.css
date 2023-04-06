@@ -7,4 +7,9 @@ footer li {
   list-style: none;
 }
 
+body {
+  background-image: url("/resources/data/background.png");
+  background-size: 20%;
+}
+
 /*# sourceMappingURL=common.css.map */
