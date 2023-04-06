@@ -14,7 +14,7 @@
             <x-company-input id="capital" name="資本金" type="number" require="true">単位：百万円※数字のみ入力してください（例：資本金4000万円→40）</x-company-input>
             <x-company-input id="sales" name="売上高" type="number" require="true">単位：百万円※数字のみ入力してください（例：売上高1億7000万円→170）</x-company-input>
             <x-company-input id="employees" name="従業員数" type="number" require="true">単位：人※数字のみ入力してください</x-company-input>
-            <x-company-input id="companyHP" name="会社HP等" type="number" require="true">会社のHPや採用ページのURLを入力してください。</x-company-input>
+            <x-company-input id="companyHP" name="会社HP等" type="url" require="true">会社のHPや採用ページのURLを入力してください。</x-company-input>
             <x-company-input id="category" name="業種・業態" type="text" require="true"></x-company-input>
             <x-company-textarea id="description" name="事業内容" require="true"></x-company-textarea>
             <x-company-textarea id="companyPR" name="企業PR" require="true"></x-company-textarea>
