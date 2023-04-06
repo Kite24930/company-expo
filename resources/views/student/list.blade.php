@@ -9,9 +9,9 @@
                 @foreach($first as $record)
                     <div class="card" style="width: 18rem;">
                         <div class="card-body">
-                            <h5 class="card-title">【No.{{ $record -> booth }}】{{ $record -> company_name }}</h5>
+                            <h4 class="card-title">【No.{{ $record -> booth }}】<br>{{ $record -> company_name }}</h4>
                             <p class="card-text">{{ $record -> company_PR }}</p>
-                            <ul class="list-group">
+                            <ul class="list-group mb-2">
                                 <li class="list-group-item">
                                     【業種】{{ $record -> category }}
                                 </li>
