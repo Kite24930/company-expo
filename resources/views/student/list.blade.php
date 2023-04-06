@@ -2,7 +2,7 @@
     <div class="container-md">
         <h1>参加企業一覧</h1>
     </div>
-    <div class="container-md d-flex justify-content-center align-items-center">
+    <div class="container-md d-flex flex-column justify-content-center align-items-center">
         <div class="d-flex flex-column justify-content-center align-items-center">
             <h2>【第一部（9:30〜11:30）】</h2>
             <div class="d-flex justify-content-center align-items-center">
