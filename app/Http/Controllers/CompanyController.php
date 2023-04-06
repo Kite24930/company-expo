@@ -63,7 +63,7 @@ class CompanyController extends Controller
 
 
     public function fix(Request $request) {
-        Company::where('company_id', $request -> companyID)->update([
+        Company::where('company_id', $request -> companyId)->update([
             'company_name' => $request -> companyName,
             'company_ruby' => $request -> companyRuby,
             'company_address' => $request -> companyAddress,
