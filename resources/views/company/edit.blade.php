@@ -30,7 +30,7 @@
             <x-company-input id="recruitEmail" name="採用窓口メールアドレス" type="email" require="true"></x-company-input>
         @else
             @method('patch')
-            @foreach($data as $key => $value)
+            @foreach($data[0] as $key => $value)
                 {{$key}}:{{$value}}
             @endforeach
 {{--            <x-company-input-edit id="companyName" name="企業名" :data="$data->company_name"></x-company-input-edit>--}}
