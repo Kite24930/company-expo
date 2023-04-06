@@ -13,7 +13,7 @@ class MainController extends Controller
         $userId = $user -> id;
         return match ($userStatus) {
             1 => redirect('/student/list'),
-            2 => redirect('/company/edit/' . $userId),
+            2 => redirect('/company/edit'),
             default => redirect('/'),
         };
     }
