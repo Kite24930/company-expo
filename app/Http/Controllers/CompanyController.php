@@ -12,7 +12,10 @@ class CompanyController extends Controller
 {
     public function edit() {
         $id = Auth::id();
-        $data = Company::where('company_id', $id) -> get();
+        $data = [
+            'records' => Company::where('company_id', $id) -> get()
+        ];
+//        $data = Company::where('company_id', $id) -> get();
         $count = $data -> count();
         return view('company.edit', compact('id', 'data', 'count'));
     }
