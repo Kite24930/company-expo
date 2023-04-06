@@ -1,5 +1,9 @@
 @import "./common.css";
 
+body {
+    background-image: url("/resources/data/background.png");
+}
+
 .title {
     background-image: url("/resources/data/building.png");
     background-size: 100%;
