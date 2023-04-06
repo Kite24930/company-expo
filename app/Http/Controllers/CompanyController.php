@@ -19,4 +19,12 @@ class CompanyController extends Controller
     public function contact($id) {
 
     }
+
+    public function create(Request $request) {
+        
+    }
+
+    public function fix(Request $request) {
+
+    }
 }

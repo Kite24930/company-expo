@@ -29,7 +29,7 @@ return new class extends Migration
             $table->integer('sales');
             $table->integer('employees');
             $table->integer('schoolmate');
-            $table->string('recruit_type')->nullable(true);
+            $table->string('recruit_type');
             $table->integer('recruit_planned_number')->nullable(true);
             $table->string('location');
             $table->string('target')->nullable(true);
