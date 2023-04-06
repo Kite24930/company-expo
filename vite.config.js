@@ -24,6 +24,7 @@ export default defineConfig({
                 app: 'resources/js/app.js',
                 index: 'resources/js/index.js',
                 edit: 'resources/js/edit.js',
+                list: 'resources/js/list.js',
             }
         }
     }
