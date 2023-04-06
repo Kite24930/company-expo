@@ -23,6 +23,7 @@ export default defineConfig({
             input: {
                 app: 'resources/js/app.js',
                 index: 'resources/js/index.js',
+                edit: 'resources/js/edit.js',
             }
         }
     }
