@@ -5,7 +5,7 @@
     </div>
     <form id="companyForm" method="POST" action="/api/company" class="container-md my-3">
         @csrf
-        <input type="hidden" id="companyId" value="{{ $id }}">
+        <input type="hidden" id="companyId" name="companyId" value="{{ $id }}">
         @if($count === 0)
             <x-company-input id="companyName" name="企業名" type="text" require="true"></x-company-input>
             <x-company-input id="companyRuby" name="企業名（ふりがな）" type="text" require="true"></x-company-input>
