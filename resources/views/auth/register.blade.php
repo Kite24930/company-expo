@@ -53,13 +53,13 @@
 
         @switch($type)
             @case('student')
-                <input id="status" type="hidden" value="1" required>
+                <input id="status" name="status" type="hidden" value="1" required>
                 @break
             @case('company')
-                <input id="status" type="hidden" value="2" required>
+                <input id="status" name="status" type="hidden" value="2" required>
                 @break
             @default
-                <input id="status" type="hidden" value="0" required>
+                <input id="status" name="status" type="hidden" value="0" required>
                 @break
         @endswitch
 
