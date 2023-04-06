@@ -100,7 +100,7 @@ editBtn.addEventListener('click', () => {
     }
 
     if (check) {
-        document.getElementById('companyForm').submit();
+        // document.getElementById('companyForm').submit();
         const sendData = new URLSearchParams({
             'companyId': companyId.value,
             'companyName': companyName.value,
