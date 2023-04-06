@@ -19,9 +19,13 @@ class MainController extends Controller
     }
 
     public function index() {
-        $user = Auth::user();
-        $status = $user -> status;
-        $id = $user -> id;
+        $status = null;
+        $id = null;
+        if (Auth::check()) {
+            $user = Auth::user();
+            $status = $user -> status;
+            $id = $user -> id;
+        }
         return view('index', compact('status', 'id'));
     }
 }
