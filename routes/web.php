@@ -17,9 +17,7 @@ use App\Http\Controllers\CompanyController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [MainController::class, 'index']);
 
 Route::get('/routing', [MainController::class, 'routing'])->middleware(['auth', 'verified'])->name('dashboard');
 

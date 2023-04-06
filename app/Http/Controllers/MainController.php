@@ -22,7 +22,6 @@ class MainController extends Controller
         $user = Auth::user();
         $status = $user -> status;
         $id = $user -> id;
-        $test = 'test';
-        return view('index', compact('status', 'id', 'test'));
+        return view('index', compact('status', 'id'));
     }
 }
