@@ -47,7 +47,7 @@
                     <a href="/login?type=student" class="btn btn-outline-success">ログイン</a>
                 </div>
             @endguest
-            {{ $status }}
+            {{ $test }}
             @auth
 {{--                @if($status === 1)--}}
 {{--                    <div class="btn-group">--}}
