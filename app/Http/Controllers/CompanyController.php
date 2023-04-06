@@ -17,7 +17,7 @@ class CompanyController extends Controller
         if ($count === 0) {
             $data = null;
         } else {
-            foreach ($company[0] as $key => $value) {
+            foreach ($company as $key => $value) {
                 $data[$key] = $value;
             }
         }
