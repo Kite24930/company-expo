@@ -47,12 +47,13 @@
                     <a href="/login?type=student" class="btn btn-outline-success">ログイン</a>
                 </div>
             @endguest
+            {{ $status }}
             @auth
-                @if($status === 1)
-                    <div class="btn-group">
-                        <a href="/student/list" class="btn btn-success">企業一覧</a>
-                    </div>
-                @endif
+{{--                @if($status === 1)--}}
+{{--                    <div class="btn-group">--}}
+{{--                        <a href="/student/list" class="btn btn-success">企業一覧</a>--}}
+{{--                    </div>--}}
+{{--                @endif--}}
             @endauth
         </div>
         <div class="text-center border border-primary rounded pages m-2 p-2">
@@ -65,11 +66,11 @@
                 </div>
             @endguest
             @auth
-                @if($status === 2)
-                    <div class="btn-group">
-                        <a href="/company/edit/{{ $id }}" class="btn btn-primary">企業一覧</a>
-                    </div>
-                @endif
+{{--                @if($status === 2)--}}
+{{--                    <div class="btn-group">--}}
+{{--                        <a href="/company/edit/{{ $id }}" class="btn btn-primary">企業一覧</a>--}}
+{{--                    </div>--}}
+{{--                @endif--}}
             @endauth
         </div>
     </div>
