@@ -7,6 +7,6 @@
         @endif
         {{ $name }}
     </label>
-    <input type="{{ $type }}" class="form-control" id="{{ $id }}" aria-describedby="{{ $id }}Help">
+    <input type="{{ $type }}" class="form-control company-input" id="{{ $id }}" aria-describedby="{{ $id }}Help" name="{{ $id }}">
     <div id="{{ $id }}Help" class="form-text">{{ $slot }}</div>
 </div>

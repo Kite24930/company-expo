@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const editBtn = document.getElementById('editBtn');
+const companyId = document.getElementById('companyId');
 const companyName = document.getElementById('companyName');
 const companyRuby = document.getElementById('companyRuby');
 const companyAddress = document.getElementById('companyAddress');
@@ -100,6 +101,33 @@ editBtn.addEventListener('click', () => {
 
     if (check) {
         document.getElementById('companyForm').submit();
+        // const sendData = new URLSearchParams({
+        //     'companyName': companyName.value,
+        //     'companyRuby': companyRuby.value,
+        //     'companyAddress': companyAddress.value,
+        //     'establishment': establishment.value,
+        //     'capital': capital.value,
+        //     'sales': sales.value,
+        //     'employees': employees.value,
+        //     'companyHP': companyHP.value,
+        //     'category': category.value,
+        //     'description': description.value,
+        //     'companyPR': companyPR.value,
+        //     'schoolmate': schoolmate.value,
+        //     'recruitType': recruitType.value,
+        //     'recruitPlannedNumber': recruitPlannedNumber.value,
+        //     'location': location.value,
+        //     'target': target.value,
+        //     'recruitDepartment': recruitDepartment.value,
+        //     'recruitName': recruitName.value,
+        //     'recruitRuby': recruitRuby.value,
+        //     'recruitTel': recruitTel.value,
+        //     'recruitEmail': recruitEmail.value
+        // })
+        // axios.post('/api/company', sendData)
+        //     .then(res => {
+        //
+        //     })
     } else {
         window.alert(msg);
     }
