@@ -20,7 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::middleware('auth')->group(function () {
-    Route::post('/company', [CompanyController::class, 'create']);
-    Route::patch('/company', [CompanyController::class, 'fix']);
-});
+Route::post('/company', [CompanyController::class, 'create']);
+Route::patch('/company', [CompanyController::class, 'fix']);
