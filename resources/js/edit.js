@@ -65,11 +65,11 @@ editBtn.addEventListener('click', () => {
         check = false;
         msg += '・業種・業態が入力されていません\n';
     }
-    if (description.value === '') {
+    if (description.innerText === '') {
         check = false;
         msg += '・事業内容が入力されていません。\n';
     }
-    if (companyPR.value === '') {
+    if (companyPR.innerText === '') {
         check = false;
         msg += '・企業PRが入力されていません。\n';
     }
