@@ -31,7 +31,7 @@
         @else
             @method('patch')
             @foreach($data as $key => $value)
-                {{$key}}  :  {{$value}}
+                {{$key}}:{{$value}}<br>
             @endforeach
 {{--            <x-company-input-edit id="companyName" name="企業名" :data="$data->company_name"></x-company-input-edit>--}}
 {{--            <x-company-input-edit id="companyRuby" name="企業名（ふりがな）" type="text" require="true" :data="$data->company_ruby"></x-company-input-edit>--}}
