@@ -4,4 +4,12 @@
             <i class="bi bi-building"></i>学内合同企業説明会
         </a>
     </div>
+    @auth
+        <div class="logout">
+            <form method="POST" action="{{ route('logout) }}">
+                @csrf
+                <button type="submit" class="btn btn-warning">ログアウト</button>
+            </form>
+        </div>
+    @endauth
 </header>
