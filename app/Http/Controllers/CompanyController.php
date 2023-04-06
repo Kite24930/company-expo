@@ -50,8 +50,7 @@ class CompanyController extends Controller
                 'category' => $request->category,
             ]);
             DB::commit();
-            return ['msg' => 'ok'];
-//            return redirect(route('companyEdit'));
+            return redirect(route('companyEdit'));
         } catch (\Exception $e) {
             DB::rollBack();
             return ['msg' => $e];
