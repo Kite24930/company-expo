@@ -20,10 +20,8 @@ class MainController extends Controller
 
     public function index() {
         $user = Auth::user();
-        $data = [
-            'status' => $user -> status,
-            'id' => $user -> id
-        ];
-        return view('index', $data);
+        $status = $user -> status;
+        $id = $user -> id;
+        return view('index', compact('status', 'id'));
     }
 }
