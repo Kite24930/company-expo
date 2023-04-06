@@ -17,4 +17,13 @@ class MainController extends Controller
             default => redirect('/'),
         };
     }
+
+    public function index() {
+        $user = Auth::user();
+        $data = [
+            'status' => $user -> status,
+            'id' => $user -> id
+        ];
+        return view('index', $data);
+    }
 }

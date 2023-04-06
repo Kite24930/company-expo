@@ -41,18 +41,36 @@
         <div class="text-center border border-success rounded pages m-2 p-2">
             <h3>学生用ページ</h3>
             <p>参加企業の検索や詳細が確認できます。<br>企業への問い合わせ等も可能です。</p>
-            <div class="btn-group-vertical">
-                <a href="/register?type=student" class="btn btn-outline-success">新規登録</a>
-                <a href="/login?type=student" class="btn btn-outline-success">ログイン</a>
-            </div>
+            @guest
+                <div class="btn-group-vertical">
+                    <a href="/register?type=student" class="btn btn-outline-success">新規登録</a>
+                    <a href="/login?type=student" class="btn btn-outline-success">ログイン</a>
+                </div>
+            @endguest
+            @auth
+                @if($status === 1)
+                    <div class="btn-group">
+                        <a href="/student/list" class="btn btn-success">企業一覧</a>
+                    </div>
+                @endif
+            @endauth
         </div>
         <div class="text-center border border-primary rounded pages m-2 p-2">
             <h3>企業用ページ</h3>
             <p>企業情報等の登録、編集を行うことができます。</p>
-            <div class="btn-group-vertical">
-                <a href="/register?type=company" class="btn btn-outline-primary">新規登録</a>
-                <a href="/login?type=company" class="btn btn-outline-primary">ログイン</a>
-            </div>
+            @guest
+                <div class="btn-group-vertical">
+                    <a href="/register?type=company" class="btn btn-outline-primary">新規登録</a>
+                    <a href="/login?type=company" class="btn btn-outline-primary">ログイン</a>
+                </div>
+            @endguest
+            @auth
+                @if($status === 2)
+                    <div class="btn-group">
+                        <a href="/company/edit/{{ $id }}" class="btn btn-primary">企業一覧</a>
+                    </div>
+                @endif
+            @endauth
         </div>
     </div>
     @vite(['resources/js/index.js'])
