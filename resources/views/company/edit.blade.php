@@ -3,7 +3,7 @@
     <p>Webページに記載する企業情報を登録、編集することができます。</p>
     <form method="POST" action="/api/company">
         @php
-            echo isset($data);
+            echo is_null($data);
         @endphp
 {{--        @if(isset($data))--}}
 {{--            <x-company-input-edit id="companyName" name="企業名" :data="$data->company_name"></x-company-input-edit>--}}
