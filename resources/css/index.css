@@ -1,0 +1,31 @@
+@import "./common.css";
+.title {
+  background-image: url("/resources/data/building.png");
+  background-size: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 255, 0, 0.1333333333);
+}
+.title h1, .title div {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.text-small {
+  font-size: 0.8rem;
+}
+
+.pages {
+  width: 90%;
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    background-size: contain;
+    background-repeat: repeat-x;
+  }
+  .md-vertical {
+    writing-mode: vertical-rl;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

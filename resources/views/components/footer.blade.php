@@ -2,14 +2,14 @@
     <ul class="m-0 p-0 m-md-5 w-75">
         <li>
             <p class="form-text text-white mb-1">【主催】</p>
-            <p class="form-label my-1">三重大学全学同窓会</p>
+            <p class="form-label my-1">三重大学工学部同窓会</p>
         </li>
         <li>
             <p class="form-text text-white mb-1">【共催】</p>
             <p class="form-label my-1">三重大学工学部</p>
             <p class="form-label my-1">三重大学工学研究科</p>
             <p class="form-label my-1">三重大学キャリアセンター</p>
-            <p class="form-label my-1">三重大学工学部同窓会</p>
+            <p class="form-label my-1">三重大学全学同窓会</p>
         </li>
     </ul>
     <ul class="m-0 p-0 m-md-5 w-75">
