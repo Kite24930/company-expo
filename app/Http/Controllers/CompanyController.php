@@ -15,7 +15,7 @@ class CompanyController extends Controller
         $company = Company::where('company_id', $id);
         $data = [
             'id' => $id,
-            'records' => $company -> first(),
+            'data' => $company -> first(),
             'count' => $company -> get() -> count()
         ];
         return view('company.edit', $data);
