@@ -30,7 +30,7 @@
             <x-company-input id="recruitEmail" name="採用窓口メールアドレス" type="email" require="true"></x-company-input>
         @else
             @method('patch')
-            <x-company-input-edit id="companyName" name="企業名" :data="{{ $date -> company_name }}"></x-company-input-edit>
+            <x-company-input-edit id="companyName" name="企業名" :data="$data['company_name']"></x-company-input-edit>
             <x-company-input-edit id="companyRuby" name="企業名（ふりがな）" type="text" require="true" :data="$data->company_ruby"></x-company-input-edit>
             <x-company-input-edit id="companyAddress" name="本社所在地" type="text" require="true" :data="$data->company_address"></x-company-input-edit>
             <x-company-input-edit id="establishment" name="設立年月日" type="date" require="true" :data="$data->establishment"></x-company-input-edit>
