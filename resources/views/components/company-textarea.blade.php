@@ -7,7 +7,6 @@
         @endif
         {{ $name }}
     </label>
-    <textarea type="text" class="form-control" id="{{ $id }}" aria-describedby="{{ $id }}Help" rows="5">
-    </textarea>
+    <textarea type="text" class="form-control" id="{{ $id }}" aria-describedby="{{ $id }}Help" rows="5"></textarea>
     <div id="{{ $id }}Help" class="form-text">{{ $slot }}</div>
 </div>
