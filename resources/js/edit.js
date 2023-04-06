@@ -48,23 +48,14 @@ editBtn.addEventListener('click', () => {
     if (capital.value === '') {
         check = false;
         msg += '・資本金が入力されていません。\n';
-    } else if (capital.value.match(/[^0-9]+/) === null) {
-        check = false;
-        msg += '・資本金に数字以外が入力されています。\n';
     }
     if (sales.value === '') {
         check = false;
         msg += '・売上高が入力されていません。\n';
-    } else if (sales.value.match(/[^0-9]+/) === null) {
-        check = false;
-        msg += '・売上高に数字以外が入力されています。\n';
     }
     if (employees.value === '') {
         check = false;
         msg += '・従業員数が入力されていません。\n';
-    } else if (employees.value.match(/[^0-9]+/) === null) {
-        check = false;
-        msg += '・従業員数に数字以外が入力されています。\n';
     }
     if (companyHP.value === '') {
         check = false;
@@ -85,9 +76,6 @@ editBtn.addEventListener('click', () => {
     if (schoolmate.value === '') {
         check = false;
         msg += '・三重大学卒業生入社人数が入力されていません。\n';
-    } else if (schoolmate.value.match(/[^0-9]+/) === null) {
-        check = false;
-        msg += '・三重大学卒業生入社人数に数字以外が入力されています。\n';
     }
     if (recruitType.value === '') {
         check = false;
