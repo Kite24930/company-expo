@@ -6,7 +6,7 @@
     </div>
     @auth
         <div class="logout">
-            <form method="POST" action="{{ route('logout) }}">
+            <form method="POST" action="{{ route('logout') }}">
                 @csrf
                 <button type="submit" class="btn btn-warning">ログアウト</button>
             </form>
