@@ -12,15 +12,8 @@ class CompanyController extends Controller
 {
     public function edit() {
         $id = Auth::id();
-        $company = Company::where('company_id', $id) -> get();
-        $count = $company -> count();
-        if ($count === 0) {
-            $data = null;
-        } else {
-            foreach ($company as $key => $value) {
-                $data[$key] = $value;
-            }
-        }
+        $data = Company::where('company_id', $id) -> get();
+        $count = $data -> count();
         return view('company.edit', compact('id', 'data', 'count'));
     }
 
