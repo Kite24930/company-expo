@@ -6,7 +6,7 @@
         <ul class="list-group container-md m-0 p-3">
             <li class="list-group-item">
                 <p class="form-text border-bottom d-inline-block">企業名</p>
-                <p class="form-label fw-bold">{{ $record -> company_name }}</p>
+                <p class="form-label">{{ $record -> company_name }}</p>
             </li>
             <li class="list-group-item">
                 <p class="form-text border-bottom d-inline-block">企業名ふりがな</p>
