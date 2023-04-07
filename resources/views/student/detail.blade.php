@@ -3,7 +3,7 @@
         <h1 class="pt-3">企業詳細</h1>
     </div>
     <div class="w-10/12 m-auto">
-        <table class="table table-bordered text-center center m-auto w-auto my-4 border bg-light table-striped" style="font-size: clamp(8px, 2.5vw, 16px)">
+        <table class="table table-bordered text-center center m-4 border bg-light table-striped container-md" style="font-size: clamp(8px, 2.5vw, 16px)">
             <tr class="fs-5">
                 <td class="p-2">企業名<br>(ふりがな)</td>
                 <td class="p-2">{{ $record->company_name }}<br>({{ $record->company_ruby }})</td>
