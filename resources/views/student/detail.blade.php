@@ -54,7 +54,7 @@
             </li>
             <li class="list-group-item">
                 <p class="form-text border-bottom d-inline-block">採用予定人数</p>
-                <p class="form-label">{{ $record -> ecruit_planned_number }} <span class="text-small">(人)</span></p>
+                <p class="form-label">{{ $record -> recruit_planned_number }} <span class="text-small">(人)</span></p>
             </li>
             <li class="list-group-item">
                 <p class="form-text border-bottom d-inline-block">勤務地</p>
