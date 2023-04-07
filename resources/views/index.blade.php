@@ -37,7 +37,7 @@
             </ul>
         </div>
     </div>
-    {{ $diff }}
+    {{ $dateCheck }}
 {{--    @if($dateCheck)--}}
     <div class="container-md d-flex flex-column justify-content-center align-items-center">
         <div class="d-flex flex-column justify-content-center align-items-center">

@@ -23,11 +23,11 @@ class MainController extends Controller
     public function index() {
         $today = new \DateTime();
         $publicTime = new \DateTime('2023-04-17');
-        $diff = $publicTime -> diff($today);
+        $today < $publicTime ? $dateCheck = false : $dateCheck = true;
         $data = [
             'first' => Company::where('section', 1) -> orderBy('booth') -> get(),
             'second' => Company::where('section', 2) -> orderBy('booth') -> get(),
-            'diff' => $diff -> format('%d'),
+            'dateCheck' => $dateCheck,
         ];
         return view('index', $data);
     }
