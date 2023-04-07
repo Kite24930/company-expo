@@ -61,7 +61,7 @@
                                     【売上高】{{ $record -> sales }}
                                 </li>
                             </ul>
-                            <a href="/student/detail/{{ $record -> company_id }}" class="btn btn-primary">詳細ページへ</a>
+                            <a href="/detail/{{ $record -> company_id }}" class="btn btn-primary">詳細ページへ</a>
                         </div>
                     </div>
                 @endforeach
@@ -89,7 +89,7 @@
                                     【売上高】{{ $record -> sales }}
                                 </li>
                             </ul>
-                            <a href="/student/detail/{{ $record -> company_id }}" class="btn btn-primary">詳細ページへ</a>
+                            <a href="/detail/{{ $record -> company_id }}" class="btn btn-primary">詳細ページへ</a>
                         </div>
                     </div>
                 @endforeach
