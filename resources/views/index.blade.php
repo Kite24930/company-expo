@@ -96,6 +96,8 @@
             </div>
         </div>
     </div>
+    @else
+        <div class="fs-3">参加企業リストは4/17(月)より順次公開予定！</div>
     @endif
     @vite(['resources/js/index.js'])
 </x-template>
