@@ -2,7 +2,7 @@
     <div class="container-md text-center">
         <h1 class="pt-3">企業詳細</h1>
     </div>
-    <div class="w-10/12 m-auto">
+    <div class="container-md m-auto">
         <table class="table table-bordered text-center center m-4 border bg-light table-striped container-md" style="font-size: clamp(8px, 2.5vw, 16px)">
             <tr class="fs-5">
                 <td class="p-2">企業名<br>(ふりがな)</td>
