@@ -23,7 +23,7 @@ class MainController extends Controller
     public function index() {
         $today = new \DateTime();
         $publicTime = new \DateTime('2023-04-17');
-        $diff = $today -> diff($publicTime);
+        $diff = $publicTime -> diff($today);
         $data = [
             'first' => Company::where('section', 1) -> orderBy('booth') -> get(),
             'second' => Company::where('section', 2) -> orderBy('booth') -> get(),
