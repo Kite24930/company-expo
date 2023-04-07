@@ -14,7 +14,7 @@
             </tr>
             <tr>
                 <td class="p-2">設立年月</td>
-                <td class="p-2">{{ \Carbon\Carbon::createFromTimeString($record->establishment)->format('Y年m月') }}</td>
+                <td class="p-2">{{ \Carbon\Carbon::createFromDate($record->establishment)->format('Y年m月') }}</td>
             </tr>
             <tr>
                 <td class="p-2">資本金</td>
