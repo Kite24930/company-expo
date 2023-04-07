@@ -3,7 +3,7 @@
         <h1 class="pt-3">{{ $record -> company_name }}　詳細</h1>
     </div>
     <div class="d-flex justify-content-center align-items-center flex-column">
-        <ul class="list-group container-md m-4">
+        <ul class="list-group container-md m-4 p-0">
             <li class="list-group-item">
                 <p class="form-text">企業名</p>
                 <p class="form-label fw-bold">{{ $record -> company_id }}</p>
