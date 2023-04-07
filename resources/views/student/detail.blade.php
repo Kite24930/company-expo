@@ -77,7 +77,7 @@
                 <td class="p-2">{{$data->recruit_email}}</td>
             </tr>
         </table>
-        <a href="/student/detail/" class="btn btn-primary d-grid gap-2 col-4 mx-auto mb-5">お問い合わせ</a>
+        <a href="/student/detail" class="btn btn-primary d-grid gap-2 col-4 mx-auto mb-5">お問い合わせ</a>
     </div>
-    @vite(['resources/js/list.js'])
+    @vite(['resources/js/detail.js'])
 </x-template>
