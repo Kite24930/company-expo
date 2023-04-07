@@ -77,7 +77,7 @@
                 <p class="form-label"><a href="mailto:{{ $record->recruit_email }}">{{ $record->recruit_email }}</a></p>
             </li>
         </ul>
-        <a href="/student/detail" class="btn btn-primary mb-5">お問い合わせフォーム</a>
+        <a href="/student/detail" class="btn btn-primary mb-3">お問い合わせフォーム</a>
     </div>
     @vite(['resources/js/detail.js'])
 </x-template>
