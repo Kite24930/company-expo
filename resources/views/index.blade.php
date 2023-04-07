@@ -49,7 +49,7 @@
                             <p class="card-text">[企業PR]
                                 <br>
                                 @if(mb_strlen($record->company_PR) > 35)
-                                    {{ mb_substr($record->company_PR, 0, 35) }}...<a href="/detail/{{ $record->company_id }}">続きは詳細で</a>
+                                    {{ mb_substr($record->company_PR, 0, 35) }}...   <a href="/detail/{{ $record->company_id }}">続きは詳細で</a>
                                 @else
                                     {{ $record -> company_PR }}
                                 @endif
