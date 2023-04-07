@@ -37,41 +37,66 @@
             </ul>
         </div>
     </div>
-    <div class="d-flex justify-content-center align-items-center flex-column flex-md-row">
-        <div class="text-center border border-success rounded pages m-2 p-2">
-            <h3>学生用ページ</h3>
-            <p>参加企業の検索や詳細が確認できます。<br>企業への問い合わせ等も可能です。</p>
-            @guest
-                <div class="btn-group-vertical">
-                    <a href="/register?type=student" class="btn btn-outline-success">新規登録</a>
-                    <a href="/login?type=student" class="btn btn-outline-success">ログイン</a>
-                </div>
-            @endguest
-            @auth
-                @if($status === 1)
-                    <div class="btn-group">
-                        <a href="/student/list" class="btn btn-success">企業一覧</a>
+    {{ $diff }}
+{{--    @if($dateCheck)--}}
+    <div class="container-md d-flex flex-column justify-content-center align-items-center">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <h2>【第一部（9:30〜11:30）】</h2>
+            <div class="d-flex justify-content-center align-items-center">
+                @foreach($first as $record)
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h4 class="card-title">【No.{{ $record -> booth }}】<br>{{ $record -> company_name }}</h4>
+                            <p class="card-text">{{ $record -> company_PR }}</p>
+                            <ul class="list-group mb-2">
+                                <li class="list-group-item">
+                                    【業種】{{ $record -> category }}
+                                </li>
+                                <li class="list-group-item">
+                                    【募集職種】{{ $record -> recruit_type }}
+                                </li>
+                                <li class="list-group-item">
+                                    【資本金】{{ $record -> capital }}
+                                </li>
+                                <li class="list-group-item">
+                                    【売上高】{{ $record -> sales }}
+                                </li>
+                            </ul>
+                            <a href="/student/detail/{{ $record -> company_id }}" class="btn btn-primary">詳細ページへ</a>
+                        </div>
                     </div>
-                @endif
-            @endauth
+                @endforeach
+            </div>
         </div>
-        <div class="text-center border border-primary rounded pages m-2 p-2">
-            <h3>企業用ページ</h3>
-            <p>企業情報等の登録、編集を行うことができます。</p>
-            @guest
-                <div class="btn-group-vertical">
-                    <a href="/register?type=company" class="btn btn-outline-primary">新規登録</a>
-                    <a href="/login?type=company" class="btn btn-outline-primary">ログイン</a>
-                </div>
-            @endguest
-            @auth
-                @if($status === 2)
-                    <div class="btn-group">
-                        <a href="/company/edit/{{ $id }}" class="btn btn-primary">企業一覧</a>
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <h2>【第二部（12:30〜14:30）】</h2>
+            <div class="d-flex justify-content-center align-items-center">
+                @foreach($second as $record)
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">【No.{{ $record -> booth }}】{{ $record -> company_name }}</h5>
+                            <p class="card-text">{{ $record -> company_PR }}</p>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    【業種】{{ $record -> category }}
+                                </li>
+                                <li class="list-group-item">
+                                    【募集職種】{{ $record -> recruit_type }}
+                                </li>
+                                <li class="list-group-item">
+                                    【資本金】{{ $record -> capital }}
+                                </li>
+                                <li class="list-group-item">
+                                    【売上高】{{ $record -> sales }}
+                                </li>
+                            </ul>
+                            <a href="/student/detail/{{ $record -> company_id }}" class="btn btn-primary">詳細ページへ</a>
+                        </div>
                     </div>
-                @endif
-            @endauth
+                @endforeach
+            </div>
         </div>
     </div>
+{{--    @endif--}}
     @vite(['resources/js/index.js'])
 </x-template>

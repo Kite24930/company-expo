@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Company;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Date;
 
 class MainController extends Controller
 {
@@ -19,13 +21,14 @@ class MainController extends Controller
     }
 
     public function index() {
-        $status = null;
-        $id = null;
-        if (Auth::check()) {
-            $user = Auth::user();
-            $status = $user -> status;
-            $id = $user -> id;
-        }
-        return view('index', compact('status', 'id'));
+        $today = new \DateTime();
+        $publicTime = new \DateTime('2023-04-17');
+        $diff = $today -> diff($publicTime);
+        $data = [
+            'first' => Company::where('section', 1) -> orderBy('booth') -> get(),
+            'second' => Company::where('section', 2) -> orderBy('booth') -> get(),
+            'diff' => $diff,
+        ];
+        return view('index', $data);
     }
 }
