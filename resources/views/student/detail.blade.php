@@ -3,7 +3,7 @@
         <h1 class="pt-3">{{ $record -> company_name }}　詳細</h1>
     </div>
     <div id="detailList" class="d-flex justify-content-center align-items-center flex-column">
-        <ul class="list-group container-md m-0 p-4">
+        <ul class="list-group container-md m-0 p-3">
             <li class="list-group-item">
                 <p class="form-text border-bottom d-inline-block">企業名</p>
                 <p class="form-label fw-bold">{{ $record -> company_name }}</p>
@@ -77,7 +77,7 @@
                 <p class="form-label"><a href="mailto:{{ $record->recruit_email }}">{{ $record->recruit_email }}</a></p>
             </li>
         </ul>
-        <a href="/student/detail" class="btn btn-primary d-grid gap-2 col-4 mx-auto mb-5">お問い合わせフォーム</a>
+        <a href="/student/detail" class="btn btn-primary mb-5">お問い合わせフォーム</a>
     </div>
     @vite(['resources/js/detail.js'])
 </x-template>
