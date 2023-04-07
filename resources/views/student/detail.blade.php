@@ -5,7 +5,7 @@
     <div class="d-flex justify-content-center align-items-center flex-column">
         <ul class="list-group container-md m-0 p-4">
             <li class="list-group-item">
-                <p class="form-text border-bottom">企業名</p>
+                <p class="form-text border-bottom d-inline-block">企業名</p><br>
                 <p class="form-label fw-bold">{{ $record -> company_name }}</p>
             </li>
             <li class="list-group-item">
