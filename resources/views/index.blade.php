@@ -46,7 +46,14 @@
                     <div class="card" style="width: 18rem;">
                         <div class="card-body">
                             <h4 class="card-title">【No.{{ $record -> booth }}】<br>{{ $record -> company_name }}</h4>
-                            <p class="card-text">{{ $record -> company_PR }}</p>
+                            <p class="card-text">[企業PR]
+                                <br>
+                                @if(mb_strlen($record->company_PR) > 40)
+                                    {{ substr($record->company_PR, 0, 40) }}...
+                                @else
+                                    {{ $record -> company_PR }}
+                                @endif
+                            </p>
                             <ul class="list-group mb-2">
                                 <li class="list-group-item">
                                     【業種】{{ $record -> category }}
@@ -74,7 +81,7 @@
                     <div class="card" style="width: 18rem;">
                         <div class="card-body">
                             <h5 class="card-title">【No.{{ $record -> booth }}】{{ $record -> company_name }}</h5>
-                            <p class="card-text">{{ $record -> company_PR }}</p>
+                            <p class="card-text">[企業PR]<br>{{ $record -> company_PR }}</p>
                             <ul class="list-group">
                                 <li class="list-group-item">
                                     【業種】{{ $record -> category }}
