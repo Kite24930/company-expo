@@ -38,11 +38,6 @@
         </div>
     </div>
     @if($dateCheck)
-        true
-    @else
-        false
-    @endif
-{{--    @if($dateCheck)--}}
     <div class="container-md d-flex flex-column justify-content-center align-items-center">
         <div class="d-flex flex-column justify-content-center align-items-center">
             <h2>【第一部（9:30〜11:30）】</h2>
@@ -101,6 +96,6 @@
             </div>
         </div>
     </div>
-{{--    @endif--}}
+    @endif
     @vite(['resources/js/index.js'])
 </x-template>
