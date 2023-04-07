@@ -2,7 +2,7 @@
     <div class="container-md text-center">
         <h1 class="pt-3">{{ $record -> company_name }}　詳細</h1>
     </div>
-    <div class="d-flex justify-content-center align-items-center flex-column">
+    <div id="detailList" class="d-flex justify-content-center align-items-center flex-column">
         <ul class="list-group container-md m-0 p-4">
             <li class="list-group-item">
                 <p class="form-text border-bottom d-inline-block">企業名</p>

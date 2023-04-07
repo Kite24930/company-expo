@@ -3,6 +3,10 @@
   font-family: "Zen Kaku Gothic Antique", sans-serif;
 }
 
+header {
+  z-index: 900;
+}
+
 footer li {
   list-style: none;
 }
