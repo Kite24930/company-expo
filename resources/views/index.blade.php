@@ -48,8 +48,8 @@
                             <h4 class="card-title">【No.{{ $record -> booth }}】<br>{{ $record -> company_name }}</h4>
                             <p class="card-text">[企業PR]
                                 <br>
-                                @if(mb_strlen($record->company_PR) > 40)
-                                    {{ mb_substr($record->company_PR, 0, 40) }}...
+                                @if(mb_strlen($record->company_PR) > 35)
+                                    {{ mb_substr($record->company_PR, 0, 35) }}...<a href="/detail/{{ $record->company_id }}">続きは詳細で</a>
                                 @else
                                     {{ $record -> company_PR }}
                                 @endif
