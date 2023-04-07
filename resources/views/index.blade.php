@@ -49,7 +49,7 @@
                             <p class="card-text">[企業PR]
                                 <br>
                                 @if(mb_strlen($record->company_PR) > 40)
-                                    {{ mb_substr($record->company_PR, 0) }}...
+                                    {{ mb_substr($record->company_PR, 0, 40) }}...
                                 @else
                                     {{ $record -> company_PR }}
                                 @endif
