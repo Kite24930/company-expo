@@ -18,15 +18,15 @@
             </tr>
             <tr>
                 <td class="p-2">資本金</td>
-                <td class="p-2">{{ $record->capital }}百万円</td>
+                <td class="p-2">{{ $record->capital }}<span class="text-small">(百万円)</span></td>
             </tr>
             <tr>
                 <td class="p-2">売上金</td>
-                <td class="p-2">{{ $record->sales }}百万円</td>
+                <td class="p-2">{{ $record->sales }}<span class="text-small">(百万円)</span></td>
             </tr>
             <tr>
                 <td class="p-2">従業員数</td>
-                <td class="p-2">{{ $record->employees }}人</td>
+                <td class="p-2">{{ $record->employees }}<span class="text-small">(人)</span></td>
             </tr>
             <tr>
                 <td class="p-2">HP URL</td>
@@ -46,7 +46,7 @@
             </tr>
             <tr>
                 <td class="p-2">三重大学同窓生入社人数</td>
-                <td class="p-2">{{ $record->schoolmate }}人</td>
+                <td class="p-2">{{ $record->schoolmate }}<span class="text-small">(人)</span></td>
             </tr>
             <tr>
                 <td class="p-2">募集職種</td>
@@ -54,7 +54,7 @@
             </tr>
             <tr>
                 <td class="p-2">採用予定人数</td>
-                <td class="p-2">{{ $record->recruit_planned_number }}人</td>
+                <td class="p-2">{{ $record->recruit_planned_number }}<span class="text-small">(人)</span></td>
             </tr>
             <tr>
                 <td class="p-2">勤務地</td>
