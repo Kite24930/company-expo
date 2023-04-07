@@ -70,7 +70,7 @@
             </tr>
             <tr>
                 <td class="p-2">採用窓口電話番号</td>
-                <td class="p-2"><a href="{{ $record->recruit_tel }}">{{ $record->recruit_tel }}</a></td>
+                <td class="p-2"><a href="tel:{{ $record->recruit_tel }}">{{ $record->recruit_tel }}</a></td>
             </tr>
             <tr>
                 <td class="p-2">採用窓口メールアドレス</td>
