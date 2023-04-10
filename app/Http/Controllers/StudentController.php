@@ -71,7 +71,7 @@ class StudentController extends Controller
                 'title' => $request->title,
                 'detail' => $request->detail,
             ];
-            return redirect('/result/'.http_build_query($data, '', '&'));
+            return redirect('/result?'.http_build_query($data, '', '&'));
         } catch (\Exception $e) {
             DB::rollBack();
             return ['msg' => $e];
