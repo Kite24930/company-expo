@@ -28,6 +28,10 @@
                 <p class="form-label">{{ $student_name }}</p>
             </li>
             <li class="list-group-item">
+                <p class="form-text border-bottom d-inline-block">メールアドレス</p>
+                <p class="form-label">{{ $student_email }}</p>
+            </li>
+            <li class="list-group-item">
                 <p class="form-text border-bottom d-inline-block">件名</p>
                 <p class="form-label">{{ $title }}</p>
             </li>

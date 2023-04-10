@@ -20,6 +20,7 @@ use App\Http\Controllers\CompanyController;
 Route::get('/', [MainController::class, 'index']);
 Route::get('/detail/{id}', [StudentController::class, 'detail'])->name('companyDetail');
 Route::get('/contact/{id}', [StudentController::class, 'contact'])->name('toCompanyContact');
+Route::get('/result/{company_id}/{company_name}/{student_number}/{student_department}/{student_grade}/{student_name}/{student_email}/{title}/{detail}', [StudentController::class, 'result'])->name('contactResult');
 
 Route::get('/routing', [MainController::class, 'routing'])->middleware(['auth', 'verified'])->name('dashboard');
 

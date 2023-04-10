@@ -60,21 +60,14 @@ class StudentController extends Controller
             $message .= '【お問い合わせ内容】'."\r\n".'[お問い合わせ企業様]'.$company->company_name."\r\n".'[学籍番号]'.$request->studentNumber."\r\n".'[学部・研究科]'.$request->studentDepartment."\r\n".'[学年]'.$request->studentGrade."\r\n".'[氏名]'.$request->studentName."\r\n".'[メールアドレス]このメールが届いているメールアドレス'."\r\n".'[件名]'.$request->title."\r\n".'[お問い合わせ内容]'.$request->detail."\r\n\r\n".'※このメールは送信専用ですので、ご返信いただいていも返信できません。'."\r\n\r\n".'2023年5月 学内合同企業説明会';
             $headers = 'From:no-reply@company-expo.mie-projectm.com';
             mb_send_mail($to,  $subject, $message, $headers);
-            $data = [
-                'company_id' => $request -> companyId,
-                'company_name' => $company -> company_name,
-                'student_number' => $request -> studentNumber,
-                'student_department' => $request -> studentDepartment,
-                'student_grade' => $request -> studentGrade,
-                'student_name' => $request -> studentName,
-                'student_email' => $request -> studentEmail,
-                'title' => $request -> title,
-                'detail' => $request -> detail,
-            ];
-            return view('student.contact-result', $data);
+            return redirect('/result/'.$request->companyId.'/'.$company->company_name.'/'.$request->studentNumber.'/'.$request->studentDepartment.'/'.$request->studentGrade.'/'.$request->studentName.'/'.$request->studentEmail.'/'.$request->title.'/'.$request->detail);
         } catch (\Exception $e) {
             DB::rollBack();
             return ['msg' => $e];
         }
+    }
+
+    public function result($company_id, $company_name, $student_number, $student_department, $student_grade, $student_name, $student_email, $title, $detail) {
+
     }
 }
