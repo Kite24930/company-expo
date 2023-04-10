@@ -59,6 +59,7 @@
                                     <option value="2">対応中</option>
                                     <option value="3" selected>対応完了</option>
                                     @break
+                                @endswitch
                             </select>
                         </li>
                     </ul>
