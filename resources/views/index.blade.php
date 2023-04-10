@@ -41,7 +41,7 @@
     <div class="container-md d-flex flex-column justify-content-center align-items-center">
         <div class="d-flex flex-column justify-content-center align-items-center">
             <h2>【第一部（9:30〜11:30）】</h2>
-            <div class="d-flex justify-content-center align-items-center">
+            <div class="d-flex justify-content-center align-items-center flex-column flex-md-row flex-md-wrap">
                 @foreach($first as $record)
                     <div class="card m-3">
                         <div class="card-body">
@@ -76,7 +76,7 @@
         </div>
         <div class="d-flex flex-column justify-content-center align-items-center">
             <h2>【第二部（12:30〜14:30）】</h2>
-            <div class="d-flex justify-content-center align-items-center">
+            <div class="d-flex justify-content-center align-items-center flex-column flex-md-row flex-md-wrap">
                 @foreach($second as $record)
                     <div class="card m-3">
                         <div class="card-body">
