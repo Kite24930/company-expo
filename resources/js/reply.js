@@ -2,7 +2,7 @@ import '/resources/css/reply.css';
 import { Tooltip, Toast, Popover } from "bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import { axios } from "axios";
+import axios from "axios";
 
 document.querySelectorAll('.form-select').forEach(e => {
     e.addEventListener('change', statusChange);
