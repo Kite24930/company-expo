@@ -6,9 +6,9 @@
     <div class="container-md text-end">
         <a href="{{ route('companyEdit') }}" class="btn btn-warning">企業情報登録・編集</a>
     </div>
-    <div class="d-flex justify-content-center align-items-center">
+    <div class="d-flex justify-content-center align-items-center flex-column flex-md-row flex-md-wrap">
         @foreach($records as $record)
-            <div class="card" style="width: 18rem;">
+            <div class="card m-3" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
