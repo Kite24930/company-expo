@@ -70,30 +70,50 @@ class CompanyController extends Controller
 
 
     public function fix(Request $request) {
-        Company::where('company_id', $request -> companyId)->update([
-            'company_name' => $request -> companyName,
-            'company_ruby' => $request -> companyRuby,
-            'company_address' => $request -> companyAddress,
-            'company_HP' => $request -> companyHP,
-            'recruit_department' => $request -> recruitDepartment,
-            'recruit_name' => $request -> recruitName,
-            'recruit_ruby' => $request -> recruitRuby,
-            'recruit_tel' => $request -> recruitTel,
-            'recruit_email' => $request -> recruitEmail,
-            'establishment' => $request -> establishment,
-            'capital' => $request -> capital,
-            'sales' => $request -> sales,
-            'employees' => $request -> employees,
-            'schoolmate' => $request -> schoolmate,
-            'recruit_type' => $request -> recruitType,
-            'recruit_planned_number' => $request -> recruitPlannedNumber,
-            'location' => $request -> location,
-            'target' => $request -> target,
-            'description' => $request -> description,
-            'company_PR' => $request -> companyPR,
-            'category' => $request -> category,
-        ]);
+        DB::beginTransaction();
+        try {
+            Company::where('company_id', $request -> companyId)->update([
+                'company_name' => $request -> companyName,
+                'company_ruby' => $request -> companyRuby,
+                'company_address' => $request -> companyAddress,
+                'company_HP' => $request -> companyHP,
+                'recruit_department' => $request -> recruitDepartment,
+                'recruit_name' => $request -> recruitName,
+                'recruit_ruby' => $request -> recruitRuby,
+                'recruit_tel' => $request -> recruitTel,
+                'recruit_email' => $request -> recruitEmail,
+                'establishment' => $request -> establishment,
+                'capital' => $request -> capital,
+                'sales' => $request -> sales,
+                'employees' => $request -> employees,
+                'schoolmate' => $request -> schoolmate,
+                'recruit_type' => $request -> recruitType,
+                'recruit_planned_number' => $request -> recruitPlannedNumber,
+                'location' => $request -> location,
+                'target' => $request -> target,
+                'description' => $request -> description,
+                'company_PR' => $request -> companyPR,
+                'category' => $request -> category,
+            ]);
+            DB::commit();
+        } catch (\Exception $e) {
+            DB::rollBack();
+        }
 
         return redirect(route('companyEdit'));
+    }
+
+    public function replyStatus(Request $request) {
+        DB::beginTransaction();
+        try {
+            Contact::find($request->target)->update([
+                'status' => $request -> status,
+            ]);
+            DB::commit();
+            return ['msg' => 'ok'];
+        } catch (\Exception $e) {
+            DB::rollBack();
+            return ['msg' => $e];
+        }
     }
 }

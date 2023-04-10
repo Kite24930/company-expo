@@ -10,9 +10,58 @@
         @foreach($records as $record)
             <div class="card m-3" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <h5 class="card-title">{{ $record->student_department }} {{ $record->student_name }}</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <p class="form-text">学籍番号</p>
+                            <p class="form-label">{{ $record->student_number }}</p>
+                        </li>
+                        <li class="list-group-item">
+                            <p class="form-text">学部・研究科</p>
+                            <p class="form-label">{{ $record->student_department }}</p>
+                        </li>
+                        <li class="list-group-item">
+                            <p class="form-text">学年</p>
+                            <p class="form-label">{{ $record->student_grade }}</p>
+                        </li>
+                        <li class="list-group-item">
+                            <p class="form-text">氏名</p>
+                            <p class="form-label">{{ $record->student_name }}</p>
+                        </li>
+                        <li class="list-group-item">
+                            <p class="form-text">メールアドレス</p>
+                            <p class="form-label"><a href="mailto:{{ $record->student_email }}">{{ $record->student_email }}</a></p>
+                        </li>
+                        <li class="list-group-item">
+                            <p class="form-text">件名</p>
+                            <p class="form-label">{{ $record->title }}</p>
+                        </li>
+                        <li class="list-group-item">
+                            <p class="form-text">お問い合わせ内容</p>
+                            <p class="form-label">{{ $record->detail }}</p>
+                        </li>
+                        <li class="list-group-item">
+                            <p class="form-text">対応状況</p>
+                            <select name="status-{{ $record->id }}" id="status-{{ $record->id }}" class="form-select" data-bs-target="{{ $record->id }}">
+                                @switch($record->status)
+                                    @case(1)
+                                    <option value="1" selected>未対応</option>
+                                    <option value="2">対応中</option>
+                                    <option value="3">対応完了</option>
+                                    @break
+                                    @case(2)
+                                    <option value="1">未対応</option>
+                                    <option value="2" selected>対応中</option>
+                                    <option value="3">対応完了</option>
+                                    @break
+                                    @case(3)
+                                    <option value="1">未対応</option>
+                                    <option value="2">対応中</option>
+                                    <option value="3" selected>対応完了</option>
+                                    @break
+                            </select>
+                        </li>
+                    </ul>
                 </div>
             </div>
         @endforeach
