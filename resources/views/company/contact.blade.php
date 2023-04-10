@@ -1,6 +1,6 @@
 <x-template title="企業問い合わせ一覧">
     <div class="container-md">
-        <h1>問い合わせ一覧</h1>
+        <h1>問い合わせ一覧 ({{ $count }}件)</h1>
         <p>届いた問い合わせを一覧表示します。</p>
     </div>
     <div class="container-md text-end">

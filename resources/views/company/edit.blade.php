@@ -4,7 +4,10 @@
         <p>Webページに記載する企業情報を登録、編集することができます。</p>
     </div>
     <div class="container-md text-end">
-        <a href="{{ route('companyContact') }}" class="btn btn-warning">問い合わせ一覧</a>
+        <div class="d-inline-block m-0 p-0 position-absolute">
+            <a href="{{ route('companyContact') }}" class="btn btn-warning">問い合わせ一覧</a>
+            <span class="position-absolute top-0 start-100 translate-middle badge bg-danger text-white">{{ $contactCount }}</span>
+        </div>
         <a href="/detail/{{ $id }}" class="btn btn-warning">企業詳細ページ</a>
     </div>
     <form id="companyForm" method="POST" action="/api/company" class="container-md my-3">
