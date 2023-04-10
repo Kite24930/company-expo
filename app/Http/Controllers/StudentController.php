@@ -57,7 +57,7 @@ class StudentController extends Controller
             $subject = '【自動送信】学生より'.$company->company_name.'様へのお問い合わせ内容';
             $message = $company->company_name.' '.$company->recruit_name."様\r\n\r\n";
             $message .= '2023年5月に開催致しました三重大学工学部同窓会主催 学内合同企業説明会にて、学生より問い合わせがございました。'."\r\n".'お問い合わせいただいた内容をご確認ください。'."\r\n".'お手数をおかけ致しますが、問い合わせ内容のご返答をよろしくお願い致します。'."\r\n\r\n";
-            $message .= '【お問い合わせ内容】'."\r\n".'[お問い合わせ企業様]'.$company->company_name."\r\n".'[学籍番号]'.$request->studentNumber."\r\n".'[学部・研究科]'.$request->studentDepartment."\r\n".'[学年]'.$request->studentGrade."\r\n".'[氏名]'.$request->studentName."\r\n".'[メールアドレス]このメールが届いているメールアドレス'."\r\n".'[件名]'.$request->title."\r\n".'[お問い合わせ内容]'.$request->detail."\r\n\r\n".'※このメールは送信専用ですので、ご返信いただいていも返信できません。'."\r\n\r\n".'2023年5月 学内合同企業説明会';
+            $message .= '【お問い合わせ内容】'."\r\n".'[お問い合わせ企業様]'.$company->company_name."\r\n".'[学籍番号]'.$request->studentNumber."\r\n".'[学部・研究科]'.$request->studentDepartment."\r\n".'[学年]'.$request->studentGrade."\r\n".'[氏名]'.$request->studentName."\r\n".'[メールアドレス]'.$request->studentEmail."\r\n".'[件名]'.$request->title."\r\n".'[お問い合わせ内容]'.$request->detail."\r\n\r\n".'※このメールは送信専用ですので、ご返信いただいていも返信できません。'."\r\n\r\n".'2023年5月 学内合同企業説明会';
             $headers = 'From:no-reply@company-expo.mie-projectm.com';
             mb_send_mail($to,  $subject, $message, $headers);
             $data = [
