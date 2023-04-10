@@ -2,7 +2,7 @@
     <div class="d-flex align-items-center">
         <h1>{{ $record -> company_name }} 問い合わせフォーム</h1>
     </div>
-    <div id="contactForm" class="d-flex justify-content-center align-items-center flex-column">
+    <div id="contactForm" class="container-md d-flex justify-content-center align-items-center flex-column my-3">
         <form action="/api/contact" method="POST">
             <input type="hidden" id="companyId" name="companyId" value="{{ $record -> company_id }}">
             <x-company-input id="studentNumber" name="学籍番号" type="text" require="true"></x-company-input>
