@@ -42,7 +42,7 @@
                         </li>
                         <li class="list-group-item">
                             <p class="form-text">対応状況</p>
-                            <select name="status-{{ $record->id }}" id="status-{{ $record->id }}" class="form-select" data-bs-target="{{ $record->id }}">
+                            <select name="status-{{ $record->id }}" id="status-{{ $record->id }}" class="form-select text-white" data-bs-target="{{ $record->id }}">
                                 @switch($record->status)
                                     @case(1)
                                     <option value="1" selected>未対応</option>
