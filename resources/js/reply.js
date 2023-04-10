@@ -6,6 +6,7 @@ import axios from "axios";
 
 document.querySelectorAll('.form-select').forEach(e => {
     e.addEventListener('change', statusChange);
+    statusClassListChange(e);
 })
 
 function statusChange(e) {
@@ -19,12 +20,27 @@ function statusChange(e) {
         .then(res => {
             console.log(res.data);
             if (res.data.msg === 'ok') {
-
+                statusClassListChange(e);
             } else {
-
+                window.alert('対応状況の変更中にエラーが発生しました。');
             }
         })
         .catch(err => {
             console.log(err);
         })
+}
+
+function statusClassListChange(e) {
+    e.classList.remove('bg-secondary', 'bg-success', 'bg-warning');
+    switch (Number(e.value)) {
+        case 1:
+            e.classList.add('bg-secondary');
+            break;
+        case 2:
+            e.classList.add('bg-warning');
+            break;
+        case 3:
+            e.classList.add('bg-success');
+            break;
+    }
 }

@@ -6,7 +6,7 @@
     <div class="container-md text-end">
         <a href="{{ route('companyEdit') }}" class="btn btn-warning">企業情報登録・編集</a>
     </div>
-    <div class="d-flex justify-content-center align-items-center flex-column flex-md-row flex-md-wrap">
+    <div class="d-flex justify-content-start align-items-center flex-column flex-md-row flex-md-wrap">
         @foreach($records as $record)
             <div class="card m-3">
                 <div class="card-body">
