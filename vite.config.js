@@ -27,6 +27,7 @@ export default defineConfig({
                 list: 'resources/js/list.js',
                 detail: 'resources/js/detail.js',
                 contact: 'resources/js/contact.js',
+                replay: 'resources/js/reply.js',
             }
         }
     }

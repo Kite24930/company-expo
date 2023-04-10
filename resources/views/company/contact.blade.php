@@ -17,4 +17,5 @@
             </div>
         @endforeach
     </div>
+    @vite(['resources/js/reply.js'])
 </x-template>
