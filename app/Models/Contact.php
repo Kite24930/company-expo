@@ -18,5 +18,6 @@ class Contact extends Model
         'student_email',
         'title',
         'detail',
+        'status',
     ];
 }
