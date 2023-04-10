@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('student_email');
             $table->string('title');
             $table->text('detail');
+            $table->integer('status');
         });
     }
 
