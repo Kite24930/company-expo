@@ -43,7 +43,7 @@
             <h2>【第一部（9:30〜11:30）】</h2>
             <div class="d-flex justify-content-center align-items-center">
                 @foreach($first as $record)
-                    <div class="card" style="width: 18rem;">
+                    <div class="card m-3">
                         <div class="card-body">
                             <h4 class="card-title">【No.{{ $record -> booth }}】<br>{{ $record -> company_name }}</h4>
                             <p class="card-text">[企業PR]
@@ -78,7 +78,7 @@
             <h2>【第二部（12:30〜14:30）】</h2>
             <div class="d-flex justify-content-center align-items-center">
                 @foreach($second as $record)
-                    <div class="card" style="width: 18rem;">
+                    <div class="card m-3">
                         <div class="card-body">
                             <h5 class="card-title">【No.{{ $record -> booth }}】{{ $record -> company_name }}</h5>
                             <p class="card-text">[企業PR]<br>{{ $record -> company_PR }}</p>
