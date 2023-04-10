@@ -68,6 +68,17 @@ class StudentController extends Controller
     }
 
     public function result($company_id, $company_name, $student_number, $student_department, $student_grade, $student_name, $student_email, $title, $detail) {
-
+        $data = [
+            'company_id' => $company_id,
+            'company_name' => $company_name,
+            'student_number' => $student_number,
+            'student_department' => $student_department,
+            'student_grade' => $student_grade,
+            'student_name' => $student_name,
+            'student_email' => $student_email,
+            'title' => $title,
+            'detail' => $detail,
+        ];
+        return view('student.contact-result', $data);
     }
 }
