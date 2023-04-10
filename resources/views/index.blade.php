@@ -45,7 +45,7 @@
                 @foreach($first as $record)
                     <div class="card m-3">
                         <div class="card-body">
-                            <h4 class="card-title">【No.{{ $record -> booth }}】<br>{{ $record -> company_name }}</h4>
+                            <h4 class="card-title">【ブースNo.{{ $record -> booth }}】<br>{{ $record -> company_name }}</h4>
                             <p class="card-text">[企業PR]
                                 <br>
                                 @if(mb_strlen($record->company_PR) > 35)
@@ -80,7 +80,7 @@
                 @foreach($second as $record)
                     <div class="card m-3">
                         <div class="card-body">
-                            <h5 class="card-title">【No.{{ $record -> booth }}】{{ $record -> company_name }}</h5>
+                            <h5 class="card-title">【ブースNo.{{ $record -> booth }}】{{ $record -> company_name }}</h5>
                             <p class="card-text">[企業PR]<br>{{ $record -> company_PR }}</p>
                             <ul class="list-group">
                                 <li class="list-group-item">
