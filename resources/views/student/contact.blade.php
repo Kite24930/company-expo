@@ -1,4 +1,4 @@
-<x-template :title="$record -> company_name . 'お問い合わせ'">
+<x-template :title="$record -> company_name . ' お問い合わせ'">
     <div class="d-flex align-items-center">
         <h1>{{ $record -> company_name }} 問い合わせフォーム</h1>
     </div>
@@ -17,4 +17,5 @@
             </div>
         </form>
     </div>
+    @vite(['resources/js/contact.js'])
 </x-template>
