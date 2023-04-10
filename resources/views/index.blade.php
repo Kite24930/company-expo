@@ -62,10 +62,10 @@
                                     【募集職種】{{ $record -> recruit_type }}
                                 </li>
                                 <li class="list-group-item">
-                                    【資本金】{{ $record -> capital }}
+                                    【資本金】{{ $record -> capital }} <span class="text-small">(百万円)</span>
                                 </li>
                                 <li class="list-group-item">
-                                    【売上高】{{ $record -> sales }}
+                                    【売上高】{{ $record -> sales }} <span class="text-small">(百万円)</span>
                                 </li>
                             </ul>
                             <a href="/detail/{{ $record -> company_id }}" class="btn btn-primary">詳細ページへ</a>
