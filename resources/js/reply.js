@@ -10,7 +10,7 @@ document.querySelectorAll('.form-select').forEach(e => {
 })
 
 function statusChange(e) {
-    const target = Number(e.getAttribute('data-bs-target'));
+    const target = Number(e.target.getAttribute('data-bs-target'));
     const status = Number(e.target.value);
     const data = URLSearchParams({
         target: target,
@@ -20,7 +20,7 @@ function statusChange(e) {
         .then(res => {
             console.log(res.data);
             if (res.data.msg === 'ok') {
-                statusClassListChange(e);
+                statusClassListChange(e.target);
             } else {
                 window.alert('対応状況の変更中にエラーが発生しました。');
             }
