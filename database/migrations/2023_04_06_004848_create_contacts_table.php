@@ -15,7 +15,9 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->integer('company_id');
+            $table->text('student_number');
             $table->string('student_department');
+            $table->integer('student_grade');
             $table->string('student_name');
             $table->string('student_email');
             $table->string('title');

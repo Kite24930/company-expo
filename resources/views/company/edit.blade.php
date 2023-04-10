@@ -5,6 +5,7 @@
     </div>
     <div class="container-md text-end">
         <a href="{{ route('companyContact') }}" class="btn btn-warning">問い合わせ一覧</a>
+        <a href="/detail/{{ $id }}" class="btn btn-warning">企業詳細ページ</a>
     </div>
     <form id="companyForm" method="POST" action="/api/company" class="container-md my-3">
         @csrf

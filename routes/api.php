@@ -22,3 +22,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/company', [CompanyController::class, 'create']);
 Route::patch('/company', [CompanyController::class, 'fix']);
+Route::post('/contact', [StudentController::class, ])
