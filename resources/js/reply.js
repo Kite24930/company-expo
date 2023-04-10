@@ -12,7 +12,7 @@ document.querySelectorAll('.form-select').forEach(e => {
 function statusChange(e) {
     const target = Number(e.target.getAttribute('data-bs-target'));
     const status = Number(e.target.value);
-    const data = URLSearchParams({
+    const data = new URLSearchParams({
         target: target,
         status: status
     })
