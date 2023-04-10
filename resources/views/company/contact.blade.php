@@ -8,7 +8,7 @@
     </div>
     <div class="d-flex justify-content-center align-items-center flex-column flex-md-row flex-md-wrap">
         @foreach($records as $record)
-            <div class="card m-3" style="width: 18rem;">
+            <div class="card m-3">
                 <div class="card-body">
                     <h5 class="card-title">{{ $record->student_department }} {{ $record->student_name }}</h5>
                     <ul class="list-group">
