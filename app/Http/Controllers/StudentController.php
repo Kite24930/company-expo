@@ -47,7 +47,7 @@ class StudentController extends Controller
 //            メール送信の処理
         } catch (\Exception $e) {
             DB::rollBack();
-            return ['msg' => $e, 'request' => $request];
+            return ['msg' => $e, 'request' => $request->studentNumber];
         }
     }
 }
