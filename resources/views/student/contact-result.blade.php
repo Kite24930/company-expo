@@ -41,8 +41,8 @@
             </li>
         </ul>
         <div class="text-center">
-            <a href="/detail/{{ $company_id }}" class="btn btn-success text-white mb-3">{{ $company_name }} 詳細ページに戻る</a>
-            <a href="/" class="btn btn-primary text-white">TOPページに戻る</a>
+            <a href="/detail/{{ $company_id }}" class="btn btn-success text-white my-2">{{ $company_name }} 詳細ページに戻る</a>
+            <a href="/" class="btn btn-primary text-white my-2">TOPページに戻る</a>
         </div>
     </div>
     @vite(['resources/js/detail.js'])
