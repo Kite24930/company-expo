@@ -1,6 +1,6 @@
-<x-template :title="$record -> company_name . ' お問い合わせ'">
+<x-template :title="$company_name . ' お問い合わせ完了'">
     <div class="d-flex align-items-center">
-        <h1>{{ $record -> company_name }} 問い合わせ完了</h1>
+        <h1>{{ $company_name }} 問い合わせ完了</h1>
     </div>
     <div class="container-md d-flex justify-content-center align-items-center flex-column my-3">
         <div>
