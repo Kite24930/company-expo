@@ -27,7 +27,7 @@ class MainController extends Controller
         $data = [
             'first' => Company::where('section', 1) -> orderBy('booth') -> get(),
             'second' => Company::where('section', 2) -> orderBy('booth') -> get(),
-            'dateCheck' => true,
+            'dateCheck' => $dateCheck,
         ];
         return view('index', $data);
     }
