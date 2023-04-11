@@ -80,9 +80,16 @@
                 @foreach($second as $record)
                     <div class="card m-3">
                         <div class="card-body">
-                            <h5 class="card-title">【ブースNo.{{ $record -> booth }}】{{ $record -> company_name }}</h5>
-                            <p class="card-text">[企業PR]<br>{{ $record -> company_PR }}</p>
-                            <ul class="list-group">
+                            <h4 class="card-title">【ブースNo.{{ $record -> booth }}】{{ $record -> company_name }}</h4>
+                            <p class="card-text">
+                                [企業PR]<br>
+                                @if(mb_strlen($record->company_PR) > 35)
+                                    {{ mb_substr($record->company_PR, 0, 35) }}...   <a href="/detail/{{ $record->company_id }}">続きは詳細で</a>
+                                @else
+                                    {{ $record -> company_PR }}
+                                @endif
+                            </p>
+                            <ul class="list-group mb-2">
                                 <li class="list-group-item">
                                     【業種】{{ $record -> category }}
                                 </li>
