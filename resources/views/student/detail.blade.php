@@ -13,6 +13,26 @@
                 <p class="form-label">{{ $record -> company_ruby }}</p>
             </li>
             <li class="list-group-item">
+                <p class="form-text border-bottom d-inline-block">業種・業態</p>
+                <p class="form-label">{{ $record -> category }}</p>
+            </li>
+            <li class="list-group-item">
+                <p class="form-text border-bottom d-inline-block">HP or 採用ページ</p>
+                <p class="form-label"><a href="{{ $record -> company_HP }}">{{ $record -> company_HP }}</a></p>
+            </li>
+            <li class="list-group-item">
+                <p class="form-text border-bottom d-inline-block">事業内容</p>
+                <p class="form-label">{{ $record -> description }}</p>
+            </li>
+            <li class="list-group-item">
+                <p class="form-text border-bottom d-inline-block">企業PR</p>
+                <p class="form-label">{{ $record -> company_PR }}</p>
+            </li>
+            <li class="list-group-item">
+                <p class="form-text border-bottom d-inline-block">本社所在地</p>
+                <p class="form-label">{{ $record -> company_address }}</p>
+            </li>
+            <li class="list-group-item">
                 <p class="form-text border-bottom d-inline-block">設立年月</p>
                 <p class="form-label">{{ \Carbon\Carbon::createFromDate($record->establishment) -> format('Y年m月') }}</p>
             </li>
@@ -29,24 +49,12 @@
                 <p class="form-label">{{ $record -> employees }} <span class="text-small">(人)</span></p>
             </li>
             <li class="list-group-item">
-                <p class="form-text border-bottom d-inline-block">HP or 採用ページ</p>
-                <p class="form-label"><a href="{{ $record -> company_HP }}">{{ $record -> company_HP }}</a></p>
-            </li>
-            <li class="list-group-item">
-                <p class="form-text border-bottom d-inline-block">業種・業態</p>
-                <p class="form-label">{{ $record -> category }}</p>
-            </li>
-            <li class="list-group-item">
-                <p class="form-text border-bottom d-inline-block">事業内容</p>
-                <p class="form-label">{{ $record -> description }}</p>
-            </li>
-            <li class="list-group-item">
-                <p class="form-text border-bottom d-inline-block">企業PR</p>
-                <p class="form-label">{{ $record -> company_PR }}</p>
-            </li>
-            <li class="list-group-item">
-                <p class="form-text border-bottom d-inline-block">三重大学卒業生入社人数</p>
+                <p class="form-text border-bottom d-inline-block">三重大学OB・OG入社人数</p>
                 <p class="form-label">{{ $record -> schoolmate }} <span class="text-small">(人)</span></p>
+            </li>
+            <li class="list-group-item">
+                <p class="form-text border-bottom d-inline-block">対象学生</p>
+                <p class="form-label">{{ $record -> target }}</p>
             </li>
             <li class="list-group-item">
                 <p class="form-text border-bottom d-inline-block">募集職種</p>
@@ -61,12 +69,12 @@
                 <p class="form-label">{{ $record -> location }}</p>
             </li>
             <li class="list-group-item">
-                <p class="form-text border-bottom d-inline-block">対象学生</p>
-                <p class="form-label">{{ $record -> target }}</p>
-            </li>
-            <li class="list-group-item">
                 <p class="form-text border-bottom d-inline-block">採用窓口部署名</p>
                 <p class="form-label">{{ $record -> recruit_department }}</p>
+            </li>
+            <li class="list-group-item">
+                <p class="form-text border-bottom d-inline-block">採用窓口担当者名</p>
+                <p class="form-label">{{ $record -> recruit_name }}</p>
             </li>
             <li class="list-group-item">
                 <p class="form-text border-bottom d-inline-block">採用窓口電話番号</p>
