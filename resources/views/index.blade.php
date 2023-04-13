@@ -55,7 +55,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">
                                     @if($data -> booth != null)
-                                    【ブースNo.{{ $record -> booth }}】<br>
+                                    【ブースNo.{{ $data -> booth }}】<br>
                                     @endif
                                     {{ $data -> company_name }}
                                 </h4>
