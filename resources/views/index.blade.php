@@ -39,69 +39,38 @@
     </div>
     @if($dateCheck)
     <div class="container-md d-flex flex-column justify-content-center align-items-center">
-        <div class="d-flex flex-column justify-content-center align-items-center">
-            <h2>【第一部（9:30〜11:30）】</h2>
-            <div class="d-flex justify-content-center align-items-center flex-column flex-md-row flex-md-wrap">
-                @foreach($first as $record)
-                    <div class="card m-3">
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                @if($record -> booth != null)
-                                【ブースNo.{{ $record -> booth }}】<br>
-                                @endif
-                                {{ $record -> company_name }}
-                            </h4>
-                            <ul class="list-group mb-2">
-                                <li class="list-group-item">
-                                    【業種】{{ $record -> category }}
-                                </li>
-                            </ul>
-                            <a href="/detail/{{ $record -> company_id }}" class="btn btn-primary">詳細ページへ</a>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-        <div class="d-flex flex-column justify-content-center align-items-center">
-            <h2>【第二部（12:30〜14:30）】</h2>
-            <div class="d-flex justify-content-center align-items-center flex-column flex-md-row flex-md-wrap">
-                @foreach($second as $record)
-                    <div class="card m-3">
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                @if($record -> booth != null)
+        @foreach($records as $i => $record)
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                @switch($i)
+                    @case(0)
+                        <h2>【第一部（9:30〜11:30）】</h2>
+                        @break
+                    @case(1)
+                        <h2>【第二部（12:30〜14:30）】</h2>
+                        @break
+                @endswitch
+                <div class="d-flex justify-content-center align-items-center flex-column flex-md-row flex-md-wrap">
+                    @foreach($record as $data)
+                        <div class="card m-3">
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    @if($data -> booth != null)
                                     【ブースNo.{{ $record -> booth }}】<br>
-                                @endif
-                                {{ $record -> company_name }}
-                            </h4>
-                            <p class="card-text">
-                                [企業PR]<br>
-                                @if(mb_strlen($record->company_PR) > 35)
-                                    {{ mb_substr($record->company_PR, 0, 35) }}...   <a href="/detail/{{ $record->company_id }}">続きは詳細で</a>
-                                @else
-                                    {{ $record -> company_PR }}
-                                @endif
-                            </p>
-                            <ul class="list-group mb-2">
-                                <li class="list-group-item">
-                                    【業種】{{ $record -> category }}
-                                </li>
-                                <li class="list-group-item">
-                                    【募集職種】{{ $record -> recruit_type }}
-                                </li>
-                                <li class="list-group-item">
-                                    【資本金】{{ $record -> capital }} <span class="text-small">(百万円)</span>
-                                </li>
-                                <li class="list-group-item">
-                                    【売上高】{{ $record -> sales }} <span class="text-small">(百万円)</span>
-                                </li>
-                            </ul>
-                            <a href="/detail/{{ $record -> company_id }}" class="btn btn-primary">詳細ページへ</a>
+                                    @endif
+                                    {{ $data -> company_name }}
+                                </h4>
+                                <ul class="list-group mb-2">
+                                    <li class="list-group-item">
+                                        【業種】{{ $data -> category }}
+                                    </li>
+                                </ul>
+                                <a href="/detail/{{ $data -> company_id }}" class="btn btn-primary">詳細ページへ</a>
+                            </div>
                         </div>
-                    </div>
-                @endforeach
+                    @endforeach
+                </div>
             </div>
-        </div>
+        @endforeach
     </div>
     @else
         <div class="fs-3 text-center m-3">参加企業リストは4/24(月)より順次公開予定！</div>
