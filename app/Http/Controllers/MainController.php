@@ -29,7 +29,7 @@ class MainController extends Controller
                 Company::where('section', 1) ->orwhere('section', 3) -> orderBy('booth') -> get(),
                 Company::where('section', 2) -> orwhere('section', 3) -> orderBy('booth') -> get(),
             ],
-            'dateCheck' => true,
+            'dateCheck' => $dateCheck,
         ];
         return view('index', $data);
     }
