@@ -15,7 +15,7 @@
             ぜひ参加して、内定をつかみ取ろう！
         </div>
     </div>
-    <div class="d-flex justify-content-center align-items-center flex-column flex-md-row mb-6">
+    <div class="d-flex justify-content-center align-items-center flex-column flex-md-row mb-5">
         <div class="md-vertical badge bg-primary fs-3 m-2">
             開催概要
         </div>
@@ -51,7 +51,7 @@
                 @endswitch
                 <div class="container-fluid d-flex justify-content-center align-items-center flex-column flex-md-row flex-md-wrap m-0 p-0">
                     @foreach($record as $data)
-                        <div class="card m-3 text-center">
+                        <div class="card my-2 text-center">
                             <div class="card-body">
                                 <h4 class="card-title">
                                     @if($data -> booth != null)
