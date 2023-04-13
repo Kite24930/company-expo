@@ -70,7 +70,7 @@
             </li>
             <li class="list-group-item">
                 <p class="form-text border-bottom d-inline-block">採用窓口担当者名 <span class="text-small">(ふりがな)</span></p>
-                <p class="form-label">{{ $record -> recruit_name }} <span class="text-small">{{ $record -> recruit_ruby }}</span></p>
+                <p class="form-label">{{ $record -> recruit_name }} <span class="text-small">({{ $record -> recruit_ruby }})</span></p>
             </li>
             <li class="list-group-item">
                 <p class="form-text border-bottom d-inline-block">採用窓口電話番号</p>
