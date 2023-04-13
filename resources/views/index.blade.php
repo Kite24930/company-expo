@@ -51,7 +51,7 @@
                 @endswitch
                 <div class="container-fluid d-flex justify-content-center align-items-center flex-column flex-md-row flex-md-wrap m-0 p-0">
                     @foreach($record as $data)
-                        <div class="card m-3">
+                        <div class="card m-3 text-center">
                             <div class="card-body">
                                 <h4 class="card-title">
                                     @if($data -> booth != null)
