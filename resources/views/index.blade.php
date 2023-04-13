@@ -59,11 +59,7 @@
                                     @endif
                                     {{ $data -> company_name }}
                                 </h4>
-                                <ul class="list-group mb-2">
-                                    <li class="list-group-item">
-                                        【業種】{{ $data -> category }}
-                                    </li>
-                                </ul>
+                                <span class="text-small">[業種]{{ $data -> category }}</span>
                                 <a href="/detail/{{ $data -> company_id }}" class="btn btn-primary">詳細ページへ</a>
                             </div>
                         </div>
