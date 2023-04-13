@@ -40,7 +40,7 @@
     @if($dateCheck)
     <div class="container-md d-flex flex-column justify-content-center align-items-center">
         @foreach($records as $i => $record)
-            <div class="d-flex flex-column justify-content-center align-items-center">
+            <div class="container-fluid d-flex flex-column justify-content-center align-items-center">
                 @switch($i)
                     @case(0)
                         <h2>【第一部（9:30〜11:30）】</h2>
