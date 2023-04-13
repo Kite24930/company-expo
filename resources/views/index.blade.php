@@ -40,7 +40,7 @@
     @if($dateCheck)
     <div class="container-md d-flex flex-column justify-content-center align-items-center">
         @foreach($records as $i => $record)
-            <div class="container-fluid d-flex flex-column justify-content-center align-items-center">
+            <div class="container-fluid d-flex flex-column justify-content-center align-items-center m-0">
                 @switch($i)
                     @case(0)
                         <h2>【第一部（9:30〜11:30）】</h2>
@@ -49,7 +49,7 @@
                         <h2>【第二部（12:30〜14:30）】</h2>
                         @break
                 @endswitch
-                <div class="container-fluid d-flex justify-content-center align-items-center flex-column flex-md-row flex-md-wrap">
+                <div class="container-fluid d-flex justify-content-center align-items-center flex-column flex-md-row flex-md-wrap m-0">
                     @foreach($record as $data)
                         <div class="card m-3">
                             <div class="card-body">
