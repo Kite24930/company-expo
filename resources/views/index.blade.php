@@ -55,11 +55,11 @@
                             <div class="card-body">
                                 <h4 class="card-title">
                                     @if($data -> booth != null)
-                                    【ブースNo.{{ $data -> booth }}】<br>
+                                    【No.{{ $data -> booth }}】
                                     @endif
+                                    <span class="text-small">[業種]{{ $data -> category }}</span><br>
                                     {{ $data -> company_name }}
                                 </h4>
-                                <span class="text-small">[業種]{{ $data -> category }}</span>
                                 <a href="/detail/{{ $data -> company_id }}" class="btn btn-primary">詳細ページへ</a>
                             </div>
                         </div>
