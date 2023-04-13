@@ -22,11 +22,13 @@ class MainController extends Controller
 
     public function index() {
         $today = new \DateTime();
-        $publicTime = new \DateTime('2023-04-17');
+        $publicTime = new \DateTime('2023-04-24');
         $today < $publicTime ? $dateCheck = false : $dateCheck = true;
         $data = [
-            'first' => Company::where('section', 1) ->orwhere('section', 3) -> orderBy('booth') -> get(),
-            'second' => Company::where('section', 2) -> orwhere('section', 3) -> orderBy('booth') -> get(),
+            'records' => [
+                Company::where('section', 1) ->orwhere('section', 3) -> orderBy('booth') -> get(),
+                Company::where('section', 2) -> orwhere('section', 3) -> orderBy('booth') -> get(),
+            ],
             'dateCheck' => true,
         ];
         return view('index', $data);
