@@ -20,7 +20,7 @@
             開催概要
         </div>
         <div>
-            <ul class="list-group mx-3 mt-3">
+            <ul class="list-group mx-3">
                 <li class="list-group-item py-1">
                     <p class="fs-5 m-0">日時：2023/<strong class="fs-2 text-danger">5/26(金)</strong></p>
                     <p class="text-small mb-0 ms-5">第１部 ９：３０〜１１：３０</p>
