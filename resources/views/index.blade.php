@@ -15,7 +15,7 @@
             ぜひ参加して、内定をつかみ取ろう！
         </div>
     </div>
-    <div class="d-flex justify-content-center align-items-center flex-column flex-md-row mb-5">
+    <div class="d-flex justify-content-center align-items-center flex-column flex-md-row mb-3">
         <div class="md-vertical badge bg-primary fs-3 m-2">
             開催概要
         </div>
@@ -40,7 +40,7 @@
     @if($dateCheck)
     <div class="container-md d-flex flex-column justify-content-center align-items-center">
         @foreach($records as $i => $record)
-            <div class="container-fluid d-flex flex-column justify-content-center align-items-center m-0 p-0 border border-primary">
+            <div class="container-fluid d-flex flex-column justify-content-center align-items-center m-0 mb-2 p-0 border border-primary">
                 @switch($i)
                     @case(0)
                         <h2 class="my-2">【第一部（9:30〜11:30）】</h2>
