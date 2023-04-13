@@ -15,7 +15,7 @@
             ぜひ参加して、内定をつかみ取ろう！
         </div>
     </div>
-    <div class="d-flex justify-content-center align-items-center flex-column flex-md-row">
+    <div class="d-flex justify-content-center align-items-center flex-column flex-md-row mb-6">
         <div class="md-vertical badge bg-primary fs-3 m-2">
             開催概要
         </div>
@@ -24,7 +24,7 @@
                 <li class="list-group-item py-1">
                     <p class="fs-5 m-0">日時：2023/<strong class="fs-2 text-danger">5/26(金)</strong></p>
                     <p class="text-small mb-0 ms-5">第１部 ９：３０〜１１：３０</p>
-                    <p class="text-small mb-0 ms-5">第２部 １２：３０〜１５：３０</p>
+                    <p class="text-small mb-0 ms-5">第２部 １２：３０〜１４：３０</p>
                 </li>
                 <li class="list-group-item py-1">
                     <p class="fs-5 m-0">場所：三重大学　三翠ホール１Ｆ</p>
@@ -45,27 +45,15 @@
                 @foreach($first as $record)
                     <div class="card m-3">
                         <div class="card-body">
-                            <h4 class="card-title">【ブースNo.{{ $record -> booth }}】<br>{{ $record -> company_name }}</h4>
-                            <p class="card-text">[企業PR]
-                                <br>
-                                @if(mb_strlen($record->company_PR) > 35)
-                                    {{ mb_substr($record->company_PR, 0, 35) }}...   <a href="/detail/{{ $record->company_id }}">続きは詳細で</a>
-                                @else
-                                    {{ $record -> company_PR }}
+                            <h4 class="card-title">
+                                @if($record -> booth != null)
+                                【ブースNo.{{ $record -> booth }}】<br>
                                 @endif
-                            </p>
+                                {{ $record -> company_name }}
+                            </h4>
                             <ul class="list-group mb-2">
                                 <li class="list-group-item">
                                     【業種】{{ $record -> category }}
-                                </li>
-                                <li class="list-group-item">
-                                    【募集職種】{{ $record -> recruit_type }}
-                                </li>
-                                <li class="list-group-item">
-                                    【資本金】{{ $record -> capital }} <span class="text-small">(百万円)</span>
-                                </li>
-                                <li class="list-group-item">
-                                    【売上高】{{ $record -> sales }} <span class="text-small">(百万円)</span>
                                 </li>
                             </ul>
                             <a href="/detail/{{ $record -> company_id }}" class="btn btn-primary">詳細ページへ</a>
@@ -80,7 +68,12 @@
                 @foreach($second as $record)
                     <div class="card m-3">
                         <div class="card-body">
-                            <h4 class="card-title">【ブースNo.{{ $record -> booth }}】{{ $record -> company_name }}</h4>
+                            <h4 class="card-title">
+                                @if($record -> booth != null)
+                                    【ブースNo.{{ $record -> booth }}】<br>
+                                @endif
+                                {{ $record -> company_name }}
+                            </h4>
                             <p class="card-text">
                                 [企業PR]<br>
                                 @if(mb_strlen($record->company_PR) > 35)
@@ -111,7 +104,7 @@
         </div>
     </div>
     @else
-        <div class="fs-3 text-center m-3">参加企業リストは4/17(月)より順次公開予定！</div>
+        <div class="fs-3 text-center m-3">参加企業リストは4/24(月)より順次公開予定！</div>
     @endif
     @vite(['resources/js/index.js'])
 </x-template>
