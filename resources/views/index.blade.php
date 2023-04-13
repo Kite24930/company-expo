@@ -49,7 +49,7 @@
                         <h2>【第二部（12:30〜14:30）】</h2>
                         @break
                 @endswitch
-                <div class="d-flex justify-content-center align-items-center flex-column flex-md-row flex-md-wrap">
+                <div class="container-fluid d-flex justify-content-center align-items-center flex-column flex-md-row flex-md-wrap">
                     @foreach($record as $data)
                         <div class="card m-3">
                             <div class="card-body">
