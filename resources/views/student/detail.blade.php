@@ -5,12 +5,8 @@
     <div id="detailList" class="d-flex justify-content-center align-items-center flex-column">
         <ul class="list-group container-md m-0 p-3">
             <li class="list-group-item">
-                <p class="form-text border-bottom d-inline-block">企業名</p>
-                <p class="form-label">{{ $record -> company_name }}</p>
-            </li>
-            <li class="list-group-item">
-                <p class="form-text border-bottom d-inline-block">企業名ふりがな</p>
-                <p class="form-label">{{ $record -> company_ruby }}</p>
+                <p class="form-text border-bottom d-inline-block">企業名 <span class="text-small">（ふりがな）</span></p>
+                <p class="form-label">{{ $record -> company_name }} <span class="text-small">({{ $record -> company_ruby }})</span></p>
             </li>
             <li class="list-group-item">
                 <p class="form-text border-bottom d-inline-block">業種・業態</p>
@@ -73,8 +69,8 @@
                 <p class="form-label">{{ $record -> recruit_department }}</p>
             </li>
             <li class="list-group-item">
-                <p class="form-text border-bottom d-inline-block">採用窓口担当者名</p>
-                <p class="form-label">{{ $record -> recruit_name }}</p>
+                <p class="form-text border-bottom d-inline-block">採用窓口担当者名 <span class="text-small">(ふりがな)</span></p>
+                <p class="form-label">{{ $record -> recruit_name }} <span class="text-small">{{ $record -> recruit_ruby }}</span></p>
             </li>
             <li class="list-group-item">
                 <p class="form-text border-bottom d-inline-block">採用窓口電話番号</p>
