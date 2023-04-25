@@ -3,6 +3,7 @@ import { Tooltip, Toast, Popover } from "bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import axios from "axios";
+import { app, analytics } from "./module/firebase";
 
 const editBtn = document.getElementById('editBtn');
 const companyId = document.getElementById('companyId');
