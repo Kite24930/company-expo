@@ -57,11 +57,15 @@
                     @foreach($record as $data)
                         <div class="card my-2 mx-md-2 text-center">
                             <div class="card-body">
-                                <h4 class="card-title">
                                     @if($data -> booth != null)
-                                    【No.{{ $data -> booth }}】
+                                        <h4 class="card-title">
+                                            【No.{{ $data -> booth }}】
+                                        </h4>
                                     @endif
-                                    <span class="text-small">[業種]{{ $data -> category }}</span><br>
+                                <h5 class="card-title">
+                                    [業種]{{ $data -> category }}
+                                </h5>
+                                <h4 class="card-title">
                                     {{ $data -> company_name }}
                                 </h4>
                                 <a href="/detail/{{ $data -> company_id }}" class="btn btn-primary">詳細ページへ</a>
