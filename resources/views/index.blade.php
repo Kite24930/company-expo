@@ -38,11 +38,11 @@
         </div>
     </div>
     @if($dateCheck)
-    <div class="position-fixed bottom-0 end-0 m-3 d-flex justify-content-center align-items-center flex-column">
+    <div id="scrollBtn" class="position-fixed bottom-0 end-0 m-3 d-flex justify-content-center align-items-center flex-column">
         <div id="firstSectionMove" class="scroll btn btn-info mb-3 fs-5">第一部へ</div>
         <div id="secondSectionMove" class="scroll btn btn-info fs-5">第二部へ</div>
     </div>
-    <div id="container" class="container-md d-flex flex-column justify-content-center align-items-center">
+    <div id="container" class="container-md d-flex flex-column justify-content-center align-items-center position-relative">
         @foreach($records as $i => $record)
             <div class="container-fluid d-flex flex-column justify-content-center align-items-center m-0 mb-2 p-0 border border-primary rounded">
                 @switch($i)
