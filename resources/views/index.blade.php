@@ -39,8 +39,8 @@
     </div>
     @if($dateCheck)
     <div class="position-fixed bottom-0 end-0 m-3 d-flex justify-content-center align-items-center flex-column">
-        <div id="firstSectionMove" class="scroll btn btn-info bg-white mb-3 fs-5">第一部へ</div>
-        <div id="secondSectionMove" class="scroll btn btn-info bg-white fs-5">第二部へ</div>
+        <div id="firstSectionMove" class="scroll btn btn-info mb-3 fs-5">第一部へ</div>
+        <div id="secondSectionMove" class="scroll btn btn-info fs-5">第二部へ</div>
     </div>
     <div class="container-md d-flex flex-column justify-content-center align-items-center">
         @foreach($records as $i => $record)
@@ -56,7 +56,7 @@
                 <div class="container-fluid d-flex justify-content-center align-items-center flex-column flex-md-row flex-md-wrap m-0 p-0">
                     @foreach($record as $data)
                         <div class="card my-2 mx-md-2 text-center">
-                            <div class="card-body">
+                            <div class="card-body position-relative">
                                 <h4 class="card-title">
                                     @if($data -> booth != null)
                                     【No.{{ $data -> booth }}】
