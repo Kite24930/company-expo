@@ -62,9 +62,9 @@
                                             【No.{{ $data -> booth }}】
                                         </h4>
                                     @endif
-                                <h5 class="card-title">
+                                <h6 class="card-title">
                                     [業種]{{ $data -> category }}
-                                </h5>
+                                </h6>
                                 <h4 class="card-title">
                                     {{ $data -> company_name }}
                                 </h4>
