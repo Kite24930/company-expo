@@ -47,10 +47,10 @@
             <div class="container-fluid d-flex flex-column justify-content-center align-items-center m-0 mb-2 p-0 border border-primary rounded">
                 @switch($i)
                     @case(0)
-                        <h2 id="firstSection" class="my-2">【第一部（9:30〜11:30）】</h2>
+                        <h1 id="firstSection" class="my-2 bg-primary text-white">【第一部（9:30〜11:30）】</h1>
                         @break
                     @case(1)
-                        <h2 id="secondSection" class="my-2">【第二部（12:30〜14:30）】</h2>
+                        <h1 id="secondSection" class="my-2 bg-primary text-white">【第二部（12:30〜14:30）】</h1>
                         @break
                 @endswitch
                 <div class="container-fluid d-flex justify-content-center align-items-center flex-column flex-md-row flex-md-wrap m-0 p-0">
