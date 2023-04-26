@@ -38,9 +38,9 @@
         </div>
     </div>
     @if($dateCheck)
-    <div class="position-fixed bottom-0 end-0 m-3">
-        <div id="firstSectionMove" class="btn btn-outline-info">第一部へ</div>
-        <div id="secondSectionMove" class="btn btn-outline-info">第二部へ</div>
+    <div class="position-fixed bottom-0 end-0 m-3 d-flex justify-content-center align-items-center flex-column">
+        <div id="firstSectionMove" class="btn btn-outline-info bg-white">第一部へ</div>
+        <div id="secondSectionMove" class="btn btn-outline-info bg-white">第二部へ</div>
     </div>
     <div class="container-md d-flex flex-column justify-content-center align-items-center">
         @foreach($records as $i => $record)

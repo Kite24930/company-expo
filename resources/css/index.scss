@@ -22,6 +22,11 @@
 .card {
     width: 90%;
     max-width: 400px;
+    z-index: 300;
+}
+
+.btn-outline-info {
+    z-index: 500;
 }
 
 @media screen and (min-width: 768px) {
