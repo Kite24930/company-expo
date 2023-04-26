@@ -7,13 +7,13 @@ import { app, analytics } from "./module/firebase";
 document.getElementById('firstSectionMove').addEventListener('click', () => {
     document.getElementById('firstSection').scrollIntoView({
         behavior: 'smooth',
-        block: 'start',
+        block: 'center',
     })
 })
 
 document.getElementById('secondSectionMove').addEventListener('click', () => {
     document.getElementById('secondSection').scrollIntoView({
         behavior: 'smooth',
-        block: 'start',
+        block: 'center',
     })
 })
