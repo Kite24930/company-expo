@@ -22,10 +22,12 @@
 .card {
     width: 90%;
     max-width: 400px;
-    z-index: 300;
+    .card-body {
+        z-index: 300;
+    }
 }
 
-.btn-outline-info {
+.scroll {
     z-index: 500;
 }
 

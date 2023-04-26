@@ -17,10 +17,12 @@
 .card {
   width: 90%;
   max-width: 400px;
+}
+.card .card-body {
   z-index: 300;
 }
 
-.btn-outline-info {
+.scroll {
   z-index: 500;
 }
 
