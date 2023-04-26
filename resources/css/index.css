@@ -18,12 +18,13 @@
   width: 90%;
   max-width: 400px;
 }
-.card .card-body {
-  z-index: 300;
-}
 
 .scroll {
   z-index: 500;
+}
+
+#container {
+  z-index: 300;
 }
 
 @media screen and (min-width: 768px) {
