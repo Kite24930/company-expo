@@ -31,8 +31,9 @@
                 </li>
                 <li class="list-group-item py-1">
                     <p class="fs-5 m-0">【備考】</p>
-                    <p class="m-0">登録不要・服装自由・入退場自由</p>
+                    <p class="m-0">登録不要・服装自由・入退場自由/2・3年生も見学OK！</p>
                     <p class="m-0">2024年3月 三重大学 卒業（修了）予定者対象（医学部を除く全学部、全学科対象）</p>
+                    <p class="m-0 fs-6">[運営事務局]<a href="https://www.mie-projectm.com">株式会社プロジェクトM</a></p>
                 </li>
             </ul>
         </div>
