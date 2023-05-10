@@ -49,9 +49,11 @@
                 @switch($i)
                     @case(0)
                         <h1 id="firstSection" class="my-2 bg-success text-white py-3">【第一部（9:30〜11:30）】</h1>
+                        <a href="/section1.pdf" target="_blank">会場図はこちら</a>
                         @break
                     @case(1)
                         <h1 id="secondSection" class="my-2 bg-success text-white py-3">【第二部（12:30〜14:30）】</h1>
+                        <a href="/section2.pdf" target="_blank">会場図はこちら</a>
                         @break
                 @endswitch
                 <div class="container-fluid d-flex justify-content-center align-items-center flex-column flex-md-row flex-md-wrap m-0 p-0">
