@@ -19,12 +19,13 @@ class CompanyController extends Controller
             'data' => $company -> first(),
             'count' => $company -> get() -> count(),
             'contactCount' => $contactCount,
+            'msg' => $request->all(),
         ];
-        if ($request->old('msg') !== null) {
-            $data['msg'] = $request->old('msg');
-        } else {
-            $data['msg'] = 'メッセージはありません';
-        }
+//        if ($request->old('msg') !== null) {
+//            $data['msg'] = $request->old('msg');
+//        } else {
+//            $data['msg'] = 'メッセージはありません';
+//        }
         return view('company.edit', $data);
     }
 
