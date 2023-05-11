@@ -20,8 +20,8 @@ class CompanyController extends Controller
             'count' => $company -> get() -> count(),
             'contactCount' => $contactCount,
         ];
-        if ($request->session()->has('msg')) {
-            $data['msg'] = $request->session()->get('msg');
+        if ($request->old('msg') !== null) {
+            $data['msg'] = $request->old('msg');
         } else {
             $data['msg'] = 'not msg';
         }
@@ -69,7 +69,7 @@ class CompanyController extends Controller
             ]);
             DB::commit();
             $msg = '※正常に登録されました';
-            return redirect(route('companyEdit'))->with(compact('msg'));
+            return redirect(route('companyEdit'))->withInput(compact('msg'));
         } catch (\Exception $e) {
             DB::rollBack();
             return ['msg' => $e];
@@ -110,7 +110,7 @@ class CompanyController extends Controller
             $msg = '※更新処理中にエラーが発生しました';
         }
 
-        return redirect(route('companyEdit'))->with(compact('msg'));
+        return redirect(route('companyEdit'))->withInput(compact('msg'));
     }
 
     public function replyStatus(Request $request) {
