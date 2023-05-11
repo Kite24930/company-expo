@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 
 class CompanyController extends Controller
 {
-    public function edit() {
+    public function edit(Request $request) {
         $id = Auth::id();
         $company = Company::where('company_id', $id);
         $contactCount = Contact::where('company_id', $id)->count();
@@ -20,6 +20,9 @@ class CompanyController extends Controller
             'count' => $company -> get() -> count(),
             'contactCount' => $contactCount,
         ];
+        if (isset($request->msg)) {
+            $data[] = ['msg' => $request->msg];
+        }
         return view('company.edit', $data);
     }
 
@@ -63,7 +66,8 @@ class CompanyController extends Controller
                 'category' => $request->category,
             ]);
             DB::commit();
-            return redirect(route('companyEdit'));
+            $msg = '※正常に登録されました';
+            return redirect(route('companyEdit'))->with(compact('msg'));
         } catch (\Exception $e) {
             DB::rollBack();
             return ['msg' => $e];
@@ -98,11 +102,13 @@ class CompanyController extends Controller
                 'category' => $request -> category,
             ]);
             DB::commit();
+            $msg = '※正常に更新されました';
         } catch (\Exception $e) {
             DB::rollBack();
+            $msg = '※更新処理中にエラーが発生しました';
         }
 
-        return redirect(route('companyEdit'));
+        return redirect(route('companyEdit'))->with(compact('msg'));
     }
 
     public function replyStatus(Request $request) {

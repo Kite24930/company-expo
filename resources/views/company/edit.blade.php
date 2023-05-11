@@ -3,8 +3,15 @@
         <h1>企業情報編集ページ</h1>
         <p>Webページに記載する企業情報を登録、編集することができます。</p>
     </div>
+    @if(isset($msg))
+        <hr>
+        <div class="bg-info container-md text-center fs-4">
+            {{ $msg }}
+        </div>
+        <hr>
+    @endif
     <div class="container-md text-end">
-        <div class="d-inline-block m-0 p-0 position-absolute">
+        <div class="d-inline-block m-0 p-0 position-relative">
             <a href="{{ route('companyContact') }}" class="btn btn-warning">問い合わせ一覧</a>
             <span class="position-absolute top-0 start-100 translate-middle badge bg-danger text-white">{{ $contactCount }}</span>
         </div>
