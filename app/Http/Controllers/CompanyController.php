@@ -19,7 +19,7 @@ class CompanyController extends Controller
             'data' => $company -> first(),
             'count' => $company -> get() -> count(),
             'contactCount' => $contactCount,
-            'msg' => $request->all(),
+            'msg' => $request->session()->all(),
         ];
 //        if ($request->old('msg') !== null) {
 //            $data['msg'] = $request->old('msg');
