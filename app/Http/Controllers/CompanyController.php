@@ -20,8 +20,8 @@ class CompanyController extends Controller
             'count' => $company -> get() -> count(),
             'contactCount' => $contactCount,
         ];
-        if (isset($request->msg)) {
-            $data[] = ['msg' => $request->msg];
+        if ($request->session()->get('msg') !== null) {
+            $data[] = ['msg' => $request->session()->get('msg')];
         }
         return view('company.edit', $data);
     }
