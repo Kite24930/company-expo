@@ -23,7 +23,7 @@ class CompanyController extends Controller
         if ($request->old('msg') !== null) {
             $data['msg'] = $request->old('msg');
         } else {
-            $data['msg'] = 'not msg';
+            $data['msg'] = 'メッセージはありません';
         }
         return view('company.edit', $data);
     }
