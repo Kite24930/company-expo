@@ -10,6 +10,8 @@
         {{ date('Y-m-d H:i:s') }}
     </div>
     <hr>
-    <a href="{{ route('companyEdit') }}" class="btn btn-success">編集ページに戻る</a>
+    <div class="text-center m-3">
+        <a href="{{ route('companyEdit') }}" class="btn btn-success">編集ページに戻る</a>
+    </div>
     @vite(['resources/js/result.js'])
 </x-template>
