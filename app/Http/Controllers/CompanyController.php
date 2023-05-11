@@ -110,7 +110,7 @@ class CompanyController extends Controller
             $msg = '※更新処理中にエラーが発生しました';
         }
 
-        return redirect()->route('companyEdit')->with(compact('msg'));
+        return redirect()->route('companyEdit')->with('msg', '更新完了');
     }
 
     public function replyStatus(Request $request) {
