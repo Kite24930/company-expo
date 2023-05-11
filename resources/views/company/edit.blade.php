@@ -8,6 +8,7 @@
         <div class="bg-info container-md text-center fs-4">
             {{ $msg }}
             <br>
+            {{ date_default_timezone_set ('Asia/Tokyo') }}
             {{ date('Y-m-d H:i:s') }}
         </div>
         <hr>
