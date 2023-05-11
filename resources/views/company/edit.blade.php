@@ -3,13 +3,6 @@
         <h1>企業情報編集ページ</h1>
         <p>Webページに記載する企業情報を登録、編集することができます。</p>
     </div>
-    <hr>
-    <div class="bg-info container-md text-center fs-4">
-        {{ $msg }}
-        <br>
-        {{ date('Y-m-d H:i:s') }}
-    </div>
-    <hr>
     <div class="container-md text-end">
         <div class="d-inline-block m-0 p-0 position-relative">
             <a href="{{ route('companyContact') }}" class="btn btn-warning">問い合わせ一覧</a>
