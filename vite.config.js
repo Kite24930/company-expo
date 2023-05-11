@@ -28,6 +28,7 @@ export default defineConfig({
                 detail: 'resources/js/detail.js',
                 contact: 'resources/js/contact.js',
                 reply: 'resources/js/reply.js',
+                result: 'resources/js/result.js',
             }
         }
     }

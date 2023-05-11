@@ -69,7 +69,8 @@ class CompanyController extends Controller
             ]);
             DB::commit();
             $msg = '※正常に登録されました';
-            return redirect()->route('companyEdit')->with(compact('msg'));
+//            return redirect()->route('companyEdit')->with(compact('msg'));
+            return view('company.result', compact('msg'));
         } catch (\Exception $e) {
             DB::rollBack();
             return ['msg' => $e];
@@ -110,7 +111,8 @@ class CompanyController extends Controller
             $msg = '※更新処理中にエラーが発生しました';
         }
 
-        return redirect()->route('companyEdit')->with('msg', '更新完了');
+//        return redirect()->route('companyEdit')->with('msg', '更新完了');
+        return view('company.result', compact('msg'));
     }
 
     public function replyStatus(Request $request) {
