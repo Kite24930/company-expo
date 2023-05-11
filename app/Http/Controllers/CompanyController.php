@@ -22,6 +22,8 @@ class CompanyController extends Controller
         ];
         if ($request->session()->has('msg')) {
             $data['msg'] = $request->session()->get('msg');
+        } else {
+            $data['msg'] = 'not msg';
         }
         return view('company.edit', $data);
     }
