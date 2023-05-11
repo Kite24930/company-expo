@@ -6,7 +6,7 @@
     @if(isset($msg))
         <hr>
         <div class="bg-info container-md text-center fs-4">
-            {{ $msg }}
+            {{ session('msg') }}
             <br>
             {{ date('Y-m-d H:i:s') }}
         </div>
